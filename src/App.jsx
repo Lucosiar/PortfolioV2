@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import TextAboutMe from './components/TextAboutMe';
+import HobbiesComponent from './components/HobbiesComponent';
 import CardProyects from './components/CardProyects';
 import './App.css'
 import { TabsComponent } from './components/TabsComponents';
@@ -55,13 +56,43 @@ function App() {
     },
   ];
 
+  useEffect(() => {
+    const handleClick = (event) => {
+      event.preventDefault();
+      const targetId = event.currentTarget.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offset = 150;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const scrollToPosition = targetPosition - offset;
+
+        window.scrollTo({
+          top: scrollToPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', handleClick);
+    });
+
+    return () => {
+      links.forEach(link => {
+        link.removeEventListener('click', handleClick);
+      });
+    };
+  }, []);
+
 
   return (
     <div className="relative min-h-screen">
       {/*<header class="bg-[#9D85FF] shadow-lg py-7 px-5 sticky top-0 z-50 transition-all duration-300">*/}
       <header className="bg-black shadow-lg py-7 px-5 sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto flex items-center justify-between px-4 h-10">
-          <a href="#" className="flex items-center text-primary hover:text-secondary">
+          <a href="#home" className="flex items-center text-primary hover:text-secondary">
             <img rel="icon" src="/src/assets/img/serpienteMorada.ico" alt="Icono" className="w-10 h-10"/> 
             <span className="text-3xl font-bold ml-2 ">Lucosiar</span>
           </a>
@@ -76,10 +107,10 @@ function App() {
 
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-8 h-10">
-              <li><a href="#" className="hover:text-primary transition-colors duration-300 text-2xl">Sobre mí</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors duration-300 text-2xl">Tecnologías</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors duration-300 text-2xl">Proyectos</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors duration-300 text-2xl">Contacto</a></li>
+              <li><a href="#about-me" className="hover:text-primary transition-colors duration-300 text-2xl">Sobre mí</a></li>
+              <li><a href="#tecnologies" className="hover:text-primary transition-colors duration-300 text-2xl">Tecnologías</a></li>
+              <li><a href="#projects" className="hover:text-primary transition-colors duration-300 text-2xl">Proyectos</a></li>
+              <li><a href="#contact" className="hover:text-primary transition-colors duration-300 text-2xl">Contacto</a></li>
               <li><ToggleButton/></li>
               <li></li>
             </ul>
@@ -88,51 +119,65 @@ function App() {
       </header>
 
       <main>
+        
         <div className="main-container">
-          <div className="first-section">
-            <div className="first-section-left text-center">
-              {/*<img src="/src/assets/img/codee.png" alt="Icono" className="imagen_first_section"/>*/}
-              <PCComponent/>
-
+          <section id="home">
+            <div className="first-section">
+              <div className="first-section-left text-center">
+                {/*<img src="/src/assets/img/codee.png" alt="Icono" className="imagen_first_section"/>*/}
+                <PCComponent/>
+              </div>
+              <div className="first-section-right text-center">
+                <h1>Hola</h1>
+                <h1>soy Lucía Cosío Artime</h1>
+                <h3>Full Stack</h3> 
+                <h3>Desarrolladora IA</h3>
+                {/*<h3>Ayudo a las startups a digitalizar y automatizar procesos.  </h3>*/}
+              </div>
             </div>
-            <div className="first-section-right text-center">
-              <h1>Hola</h1>
-              <h1>soy Lucía Cosío Artime</h1>
-              <h3>Full Stack</h3> 
-              <h3>Desarrolladora IA</h3>
-              {/*<h3>Ayudo a las startups a digitalizar y automatizar procesos.  </h3>*/}
+          </section>
+          
+
+          <section id="about-me">
+            <div className="about-me">
+              <TextAboutMe/>
             </div>
-          </div>
 
-          <div className="about-me">
-            <TextAboutMe/>
-          </div>
-
-
-          <div className="tecnologies">
-            <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Tecnologías</h3>
-            <TabsComponent/>
-          </div>
-
-          <div className="projects">
-            <h3 className="text-3xl text-[#FFD700] pl-8 mt-10">Proyectos</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-            {projects.map((project, index) => (
-              <CardProyects
-                key={index}
-                imageSrc={project.imageSrc}
-                imageAlt={project.imageAlt}
-                title={project.title}
-                description={project.description}
-                languages={project.language}
-              />
-            ))}
+            <div className="hobbies">
+              <HobbiesComponent/>
             </div>
-          </div>
+          </section>
+          
+          <section id="tecnologies">
+            <div className="tecnologies">
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Tecnologías</h3>
+              <TabsComponent/>
+            </div>
+          </section>
 
-          <div className="contact">
-            <h1>Contacto</h1>
-          </div>
+          <section id="projects">
+            <div className="projects">
+              <h3 className="text-3xl text-[#FFD700] pl-8 mt-10">Proyectos</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+                {projects.map((project, index) => (
+                  <CardProyects
+                    key={index}
+                    imageSrc={project.imageSrc}
+                    imageAlt={project.imageAlt}
+                    title={project.title}
+                    description={project.description}
+                    languages={project.language}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+          
+          <section>
+            <div className="contact">
+              <h1>Contacto</h1>
+            </div>
+          </section>
         </div>
       </main>
 

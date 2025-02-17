@@ -23,7 +23,7 @@ const PCComponent = ({ colorPrimario = "#d2cfd6", colorSecundario = "#3d3b44" })
         </g>
         <g clipPath="url(#screen)">
           <g id="vs-code">
-            <rect x="128.5" y="240.73" width="183.8" height="95.6" fill="#565266" />
+            <rect x="128.5" y="240.73" width="184.3" height="95.9" fill="#565266" /> 
             <rect x="128.5" y="240.73" width="183.8" height="6.45" fill="#b0baea" />
             <ellipse cx="135" cy="243.95" rx="1.4" ry="1.38" fill="#e84d4d" />
             <ellipse cx="141" cy="243.95" rx="1.4" ry="1.38" fill="#f2dd77" />
