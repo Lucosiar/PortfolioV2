@@ -9,9 +9,9 @@ const PCComponent = ({ colorPrimario = "#d2cfd6", colorSecundario = "#3d3b44" })
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 448"
-            width="600"
-            height="600" 
+            viewBox="20 90 440 440" 
+            width="650"
+            height="650" 
         >
         <g id="pc">
           <polygon points="238.13 377.72 235.66 361.98 205.21 361.98 202.74 377.72 238.13 377.72" fill={colorPrimario}></polygon>

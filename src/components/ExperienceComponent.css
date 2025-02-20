@@ -1,0 +1,59 @@
+.timeline-container {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #4338CA;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .timeline-item.education {
+    text-align: right;
+    left: 0;
+  }
+
+  .timeline-item.work {
+    text-align: left;
+    left: 50%;
+    
+  }
+
+  .timeline-content {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: blck;
+    border: 2px solid #4338CA;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: yellow;
+  }
+
+  .timeline-item.education .timeline-dot {
+    left: 100.2%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item.work .timeline-dot {
+    right: 99.8%;
+    transform: translateX(50%);
+  }

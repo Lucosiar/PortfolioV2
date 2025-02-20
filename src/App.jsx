@@ -4,55 +4,56 @@ import TextAboutMe from './components/TextAboutMe';
 import HobbiesComponent from './components/HobbiesComponent';
 import CardProyects from './components/CardProyects';
 import './App.css'
-import { TabsComponent } from './components/TabsComponents';
 import ToggleButton from './components/SwitchComponent';
 import PCComponent from './components/PCComponent';
+import ExperienceComponent from './components/ExperienceComponent';
+import TecnologiesComponent from './components/TecnologiesComponent';
 
 function App() {
 
   const projects=[
     /* `Pequeña descripción de cada proycto y que queden todas mas o menos en la misma linea. No hablar en primera persona. */
     {
-      imageSrc: "/src/assets/img/proyectos/piedra_papel_tijera.gif",
+      imageSrc: "/src/assets/img/proyectos/piedra_papel_tijerateta.png",
       imageAlt: "Piedra Papel Tijera",
       title: "Piedra Papel Tijera",
       description: "El tradicional juego de Piedra, Papel y Tijera, se juega contra un modelo de inteligencia artificial programado para reconocer el gesto que hagas en la cámara y determinar si has ganado o perdido.",
       language:["Python", "HTML", "CSS", "JavaScript"],
     },
     {
-      imageSrc: "/src/assets/img/proyectos/dhhoteles.png",
+      imageSrc: "/src/assets/img/proyectos/dhhotel.png",
       imageAlt: "Gestor de Hoteles",
       title: "Gestor de Hoteles",
       description: "Propuesta de Nacho sobre una API gestora de hoteles. Mi objetivo fue crear una lading page para visualizar la página del hotel. En caso de tener el back, es posible hacer reservas, iniciar sesión y gestionar las habitaciones.",
       language:["Python", "React", "TailwindCSS"],
     },
     {
-      imageSrc: "/src/assets/img/proyectos/icono_eficura.png",
+      imageSrc: "/src/assets/img/proyectos/efi_cura.png",
       imageAlt: "Efi-Cura",
       title: "Efi-Cura",
       description: "Aplicación para la gestión de medicamentos, citas médicas, incluyendo horarios, dosis, etc. Incluye también un historial de síntomas. La aplicación no está terminada, fue mi proyecto de FP DAM.",
       language:["Java"], 
     },
     {
-      imageSrc: "/src/assets/img/proyectos/grafica_suicidios.png",
+      imageSrc: "/src/assets/img/proyectos/suicidios.png",
       imageAlt: "Análisis de suicidios",
       title: "Análisis de suicidios",
       description: "Es un estudio sobre los suicidios entre 1990 y 2022. Se realizo en función del país, los años, edades, sexo, etc. He limpiado los datos y elaborado una gráficas con el propósito de exponer la cantidad de suicidios en el mundo.",
-      language:["Python"],
+      language:["Python", "IA"],
     },
     {
-      imageSrc: "/src/assets/img/proyectos/NoteIconCompleto.png",
+      imageSrc: "/src/assets/img/proyectos/73shots_so.png",
       imageAlt: "",
       title: "Notes",
       description: "Es la primera fase de un proyecto. La aplicación te ayuda a gestionar tus rutinas y eventos. La segunda fase del proyecto es crear un hardware externo para poder usarlo como asistente virtual.", 
       language:["Java"],
     },
     {
-      imageSrc: "/src/assets/img/proyectos/animal_crossing.png",
+      imageSrc: "/src/assets/img/proyectos/acnh.png",
       imageAlt: "Análisis Animal Crossing",
       title: "Análisis Animal Crossing",
       description: "Estudio sobre los peces en el juego Animal Crossing. Calculé el tiempo o días que un jugador debería jugar para capturar todos los peces. Depende de la habilidad de cada jugador para capturar los peces y las cañas que usen.",
-      language:["Python", "Java"],
+      language:["Python", "IA"],
     },
   ];
 
@@ -108,8 +109,11 @@ function App() {
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-8 h-10">
               <li><a href="#about-me" className="hover:text-primary transition-colors duration-300 text-2xl">Sobre mí</a></li>
-              <li><a href="#tecnologies" className="hover:text-primary transition-colors duration-300 text-2xl">Tecnologías</a></li>
+              <li><a href="#experience" className="hover:text-primary transition-colors duration-300 text-2xl">TimeLine</a></li>
               <li><a href="#projects" className="hover:text-primary transition-colors duration-300 text-2xl">Proyectos</a></li>
+              
+              <li><a href="#tecnologies" className="hover:text-primary transition-colors duration-300 text-2xl">Tecnologías</a></li>
+              <li><a href="#certifies" className="hover:text-primary transition-colors duration-300 text-2xl">Certificados</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors duration-300 text-2xl">Contacto</a></li>
               <li><ToggleButton/></li>
               <li></li>
@@ -147,14 +151,15 @@ function App() {
               <HobbiesComponent/>
             </div>
           </section>
-          
-          <section id="tecnologies">
-            <div className="tecnologies">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Tecnologías</h3>
-              <TabsComponent/>
+
+          <section id="experience">
+            <div className="experience">
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">TimeLine</h3>
+              <h4 className="pl-8">Mi linea del tiempo</h4>
+              <ExperienceComponent/>
             </div>
           </section>
-
+          
           <section id="projects">
             <div className="projects">
               <h3 className="text-3xl text-[#FFD700] pl-8 mt-10">Proyectos</h3>
@@ -172,6 +177,22 @@ function App() {
               </div>
             </div>
           </section>
+
+          <section id="tecnologies">
+            <div className="tecnologies">
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Tecnologías</h3>
+              <TecnologiesComponent/>
+            </div>
+          </section>
+
+          <section id="certifies">
+            <div className="certifies">
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Certificados</h3>
+            </div>
+          </section>
+
+
+          
           
           <section>
             <div className="contact">

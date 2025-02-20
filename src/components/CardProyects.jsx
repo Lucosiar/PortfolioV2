@@ -1,18 +1,18 @@
-import { Card } from "flowbite-react";
+import React from 'react';
+import { Card } from 'flowbite-react';
 
-function CardProyects({ imageSrc, imageAlt, title, description, languages}) {
+function CardProyects({ imageSrc, imageAlt, title, description, languages }) {
   return (
-    <Card
-      className="max-w-sm flex flex-col items-center"
-      renderImage={() => (
+    <Card className="max-w-sm flex flex-col items-center bg-black">
+      <div className="rounded-lg pb-2"> 
         <img
-          width={300}
-          height={300}
+          width={340}
+          height={340}
           src={imageSrc}
           alt={imageAlt}
+          className="rounded-lg"
         />
-      )}
-    >
+      </div>
       <h5 className="text-2xl font-bold tracking-tight text-white mb-2">
         {title}
       </h5>
