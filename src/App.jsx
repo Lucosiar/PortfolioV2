@@ -8,6 +8,7 @@ import ToggleButton from './components/SwitchComponent';
 import PCComponent from './components/PCComponent';
 import ExperienceComponent from './components/ExperienceComponent';
 import TecnologiesComponent from './components/TecnologiesComponent';
+import Chatbot from './components/ChatBot';
 
 function App() {
 
@@ -125,6 +126,11 @@ function App() {
       <main>
         
         <div className="main-container">
+
+          <div className="chatbot">
+            <Chatbot />
+          </div>
+
           <section id="home">
             <div className="first-section">
               <div className="first-section-left text-center">

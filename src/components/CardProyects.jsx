@@ -3,7 +3,7 @@ import { Card } from 'flowbite-react';
 
 function CardProyects({ imageSrc, imageAlt, title, description, languages }) {
   return (
-    <Card className="max-w-sm flex flex-col items-center bg-black">
+    <Card className="cardProyects max-w-sm flex flex-col items-center bg-black">
       <div className="rounded-lg pb-2"> 
         <img
           width={340}
