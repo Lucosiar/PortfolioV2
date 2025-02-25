@@ -173,7 +173,7 @@ const TecnologiesComponent = () => {
                     </button>
                 ))}
             </div>
-            <div className="flex justify-center space-x-4">
+            <div className={`flex justify-center items-center ${activeTab === "ALL" ? "grid grid-cols-7 gap-x-10 gap-y-4 mt-4" : "flex justify-center space-x-4"}`}>
                 {categories[activeTab].map((icon, index) => (
                     <div key={index} className="w-12 h-12">
                         {icon}

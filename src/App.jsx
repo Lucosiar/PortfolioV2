@@ -9,6 +9,7 @@ import PCComponent from './components/PCComponent';
 import ExperienceComponent from './components/ExperienceComponent';
 import TecnologiesComponent from './components/TecnologiesComponent';
 import Chatbot from './components/ChatBot';
+import ContacComponent from './components/ContacComponent';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
       imageAlt: "Efi-Cura",
       title: "Efi-Cura",
       description: "Aplicación para la gestión de medicamentos, citas médicas, incluyendo horarios, dosis, etc. Incluye también un historial de síntomas. La aplicación no está terminada, fue mi proyecto de FP DAM.",
-      language:["Java"], 
+      language:["Java", "SQLite"], 
     },
     {
       imageSrc: "/src/assets/img/proyectos/suicidios.png",
@@ -43,17 +44,17 @@ function App() {
       language:["Python", "IA"],
     },
     {
-      imageSrc: "/src/assets/img/proyectos/73shots_so.png",
+      imageSrc: "/src/assets/img/proyectos/notely.png",
       imageAlt: "",
       title: "Notes",
       description: "Es la primera fase de un proyecto. La aplicación te ayuda a gestionar tus rutinas y eventos. La segunda fase del proyecto es crear un hardware externo para poder usarlo como asistente virtual.", 
-      language:["Java"],
+      language:["Java", "Firebase", "Android Studio"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/acnh.png",
       imageAlt: "Análisis Animal Crossing",
       title: "Análisis Animal Crossing",
-      description: "Estudio sobre los peces en el juego Animal Crossing. Calculé el tiempo o días que un jugador debería jugar para capturar todos los peces. Depende de la habilidad de cada jugador para capturar los peces y las cañas que usen.",
+      description: "Analisis sobre los peces en el juego Animal Crossing. Calculé el tiempo o días que un jugador debería jugar para capturar todos los peces. Depende de la habilidad de cada jugador y las cañas que usen.",
       language:["Python", "IA"],
     },
   ];
@@ -160,15 +161,14 @@ function App() {
 
           <section id="experience">
             <div className="experience">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">TimeLine</h3>
-              <h4 className="pl-8">Mi linea del tiempo</h4>
+              <h3 className="text-3xl text-[#FFD700] pl-8 pb-8 mb-2">TimeLine</h3>
               <ExperienceComponent/>
             </div>
           </section>
           
           <section id="projects">
             <div className="projects">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mt-10">Proyectos</h3>
+              <h3 className="text-3xl text-[#FFD700] pl-8 mt-20">Proyectos</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
                 {projects.map((project, index) => (
                   <CardProyects
@@ -197,12 +197,10 @@ function App() {
             </div>
           </section>
 
-
-          
-          
           <section>
             <div className="contact">
-              <h1>Contacto</h1>
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Contacto</h3>
+              <ContacComponent />
             </div>
           </section>
         </div>

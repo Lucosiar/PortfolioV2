@@ -57,6 +57,10 @@ const ExperienceComponent = () => {
 
   return (
     <div className="timeline-container">
+      <div className='timeline-header'>
+        <h1>Estudios</h1>
+        <h1>Experiencia</h1>
+      </div>
       <div className="timeline-line"></div>
       {experiences.map((experience, index) => (
         <div key={index} className={`timeline-item ${experience.type}`}>

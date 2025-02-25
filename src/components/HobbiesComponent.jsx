@@ -17,7 +17,7 @@ const HobbiesComponent = () => {
       description: 'Disfruto leyendo mangas, historias de aventuras y ciencia ficción. Además suelo leer libros sobre programación y desarrollo profesional. También me gusta leer blogs y escuchar postcast sobre nuevas tecnologías.',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
+      imgSrc: '/src/assets/img/hobbies/videojuegos.jpeg',
       title: 'Videojuegos',
       description: 'Me encanta jugar videojuegos, simuladores de carreras, de historia como Assasin\'s Creed, Far Cry y otros. Además, soy una fanática de los juegos de Nintendo.',
     },
@@ -32,17 +32,17 @@ const HobbiesComponent = () => {
       description: 'LLevo aproximadamente desde el 2016 jugando este deporte. Solemos entrenar todas las semanas y de vez en cuando viajar por la península jugando contra otros equipos y en otras competiciones. Es un mundo poco conocido pero apasionante.', 
     },
     {
-      imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
+      imgSrc: '/src/assets/img/hobbies/programacion.jpeg',
       title: 'Proyectos personales',
       description: 'A parte del trabajo, me gusta dedicar mi tiempo a proyectos personales. No solo de IA, sino que también creo páginas web, aplicaciones móviles, arduinos, etc. Tengo un par de amigos con lo que desarrollamos aplicaciones web y móviles para luego compartirlas.',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
+      imgSrc: '/src/assets/img/hobbies/estudiar.jpeg',
       title: 'Estudios',
       description: 'No me basta con lo que sé, me gusta seguir aprendiendo y expandir mis horizontes. Soy una persona autodidacta pero también suelo apuntarme a cursos.',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/coche_v2-8.jpg',
+      imgSrc: '/src/assets/img/hobbies/comer.jpeg',
       title: 'Familia y amigos',
       description: 'Suelo pasar tiempo con mi familia y amigos. Ya sea para ir a comer por ahí, jugar algún deporte, ir a la playa, animar al equipo de fútbol de mi ciudad, etc.',
     },
@@ -52,7 +52,7 @@ const HobbiesComponent = () => {
       description: 'Soy una apasionada del motor y de la gasolina. Me gusta la fórmula 1, los rallyes, la carreras de resistencia. Además, en el norte de España se lleva mucho los rallyes y las quedadas para mostrar los coches.',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/coche_v2-8.jpg',
+      imgSrc: '/src/assets/img/hobbies/modelismo.jpeg',
       title: 'Modelismo',
       description: 'Sonará extraño pero también me gusta el modelismo. Suelo centrarme en el montaje de aviones y coches. Es un hobbie que no mucha gente hace pero es entretenido y relajante.',
     },
@@ -77,8 +77,6 @@ const HobbiesComponent = () => {
   
   const [centerImage, setCenterImage] = useState('/src/assets/img/hobbies/proyecto.png');
   const [selectedHobby, setSelectedHobby] = useState(hobbies[9]);
-
-  
 
   const options = {
     responsive: true,
