@@ -1,9 +1,9 @@
 import React from 'react';
 import './CardHobbiesComponent.css';
 
-const CardHobbiesComponent = ({ imgSrc, title, description, imageOnLeft = true }) => {
+const CardHobbiesComponent = ({ imgSrc, title, description }) => {
   return (
-    <div className={`card-container ${imageOnLeft ? 'image-left' : 'image-right'}`}>
+    <div className="card-container">
       <img src={imgSrc} alt={title} className="card-image" />
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
@@ -14,3 +14,4 @@ const CardHobbiesComponent = ({ imgSrc, title, description, imageOnLeft = true }
 };
 
 export default CardHobbiesComponent;
+

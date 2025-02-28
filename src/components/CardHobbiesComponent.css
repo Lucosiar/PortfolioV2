@@ -1,40 +1,25 @@
-/* CardHobbiesComponent.css */
-
 .card-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   margin: 20px;
+  text-align: left;
 }
 
-.image-left .card-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 8px 0 0 8px;
-  object-fit: cover;
+.card-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
   border-radius: 8px;
-}
-
-.image-right .card-image {
-  width: 300px;
-  height: 300;
-  border-radius: 0 8px 8px 0;
   object-fit: cover;
-  order: 2;
 }
 
-.image-left .card-content {
+.card-content {
   padding: 16px;
-  text-align: left;
-}
-
-.image-right .card-content {
-  padding: 16px;
-  text-align: left;
-  order: 1;
 }
 
 .card-title {
@@ -46,4 +31,20 @@
 .card-description {
   font-size: 1rem;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* En pantallas pequeñas, imagen arriba y texto abajo */
+    text-align: center; /* Centrar el texto */
+  }
+
+  .card-image {
+    /*
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;*/
+    display: none;
+  }
 }

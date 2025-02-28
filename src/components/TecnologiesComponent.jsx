@@ -160,7 +160,7 @@ const TecnologiesComponent = () => {
 
     return (
         <div className="max-w-md mx-auto p-4">
-            <div className="flex justify-center space-x-2 mb-4">
+            <div className="flex justify-center space-x-2 mb-4 flex-wrap">
                 {Object.keys(categories).map((tab) => (
                     <button
                         key={tab}
@@ -173,7 +173,12 @@ const TecnologiesComponent = () => {
                     </button>
                 ))}
             </div>
-            <div className={`flex justify-center items-center ${activeTab === "ALL" ? "grid grid-cols-7 gap-x-10 gap-y-4 mt-4" : "flex justify-center space-x-4"}`}>
+            <div className={`flex justify-center items-center ${
+                activeTab === "ALL"
+                ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 gap-y-6 mt-4"
+                : "flex justify-center space-x-4"
+            }`}
+            >
                 {categories[activeTab].map((icon, index) => (
                     <div key={index} className="w-12 h-12">
                         {icon}

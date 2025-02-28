@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import CardHobbiesComponent from './CardHobbiesComponent';
-import './TextAboutMe.css';
+import './HobbieComponent.css';
+import './TextAboutMe.css'
 
 // Registrar los elementos necesarios
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -58,7 +59,7 @@ const HobbiesComponent = () => {
     },
     {
       imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
-      description: 'Si quieres saber más sobre mis hobbies, puedes pasar el ratón por encima del donut y obtener más información.',
+      description: 'Si quieres saber más sobre mis hobbies, puedes pasar el ratón por encima o clickar en el donut y obtener más información.',
     },
   ];
 
@@ -147,8 +148,7 @@ const HobbiesComponent = () => {
                 imgSrc={selectedHobby.imgSrc}
                 title={selectedHobby.title}
                 description={selectedHobby.description}
-                imageOnLeft={true} // Puedes cambiar esto según tus necesidades
-              />
+                imageOnLeft={true}/>
             </div>
           )}
         </div>

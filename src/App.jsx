@@ -10,8 +10,15 @@ import ExperienceComponent from './components/ExperienceComponent';
 import TecnologiesComponent from './components/TecnologiesComponent';
 import Chatbot from './components/ChatBot';
 import ContacComponent from './components/ContacComponent';
+import FooterComponent from './components/FooterComponent';
 
 function App() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const projects=[
     /* `Pequeña descripción de cada proycto y que queden todas mas o menos en la misma linea. No hablar en primera persona. */
@@ -100,23 +107,22 @@ function App() {
             <span className="text-3xl font-bold ml-2 ">Lucosiar</span>
           </a>
           <div className="md:hidden">
-            <button id="menu-toggle"
-                          className="text-gray-800 hover:text-primary focus:outline-none transition-colors duration-300">
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"/>
-                      </svg>
+            <button onClick={toggleMenu} className="md:hidden flex flex-col justify-between w-8 h-6 relative">
+              <span className={`block h-[3px] w-8 bg-gray-400 transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2.5" : ""}`}></span>
+              <span className={`block h-[3px] w-8 bg-gray-400 transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`}></span>
+              <span className={`block h-[3px] w-8 bg-gray-400 transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2.5" : ""}`}></span>
             </button>
+
           </div>
 
-          <nav className="hidden md:block">
-            <ul className="flex items-center space-x-8 h-10">
-              <li><a href="#about-me" className="hover:text-primary transition-colors duration-300 text-2xl">Sobre mí</a></li>
-              <li><a href="#experience" className="hover:text-primary transition-colors duration-300 text-2xl">TimeLine</a></li>
-              <li><a href="#projects" className="hover:text-primary transition-colors duration-300 text-2xl">Proyectos</a></li>
-              
-              <li><a href="#tecnologies" className="hover:text-primary transition-colors duration-300 text-2xl">Tecnologías</a></li>
-              <li><a href="#certifies" className="hover:text-primary transition-colors duration-300 text-2xl">Certificados</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors duration-300 text-2xl">Contacto</a></li>
+          <nav className={`${menuOpen ? "block" : "hidden"} md:block absolute top-full left-0 w-full bg-black shadow-lg md:static md:w-auto`}>
+            <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
+              <li><a href="#about-me" className="text-white text-xl">Sobre mí</a></li>
+              <li><a href="#experience" className="text-white text-xl">TimeLine</a></li>
+              <li><a href="#projects" className="text-white text-xl">Proyectos</a></li>
+              <li><a href="#tecnologies" className="text-white text-xl">Tecnologías</a></li>
+              <li><a href="#certifies" className="text-white text-xl">Certificados</a></li>
+              <li><a href="#contact" className="text-white text-xl">Contacto</a></li>
               <li><ToggleButton/></li>
               <li></li>
             </ul>
@@ -143,12 +149,31 @@ function App() {
                 <h1>soy Lucía Cosío Artime</h1>
                 <h3>Full Stack</h3> 
                 <h3>Desarrolladora IA</h3>
+                <div>
+                <div className="flex space-x-3">
+                  <div className="icon-container">
+                    <img
+                      src="/src/assets/img/rrss/linkedin1.png"
+                      alt="LinkedIn"
+                      className="icon-social"
+                    />
+                  </div>
+                  <div className="icon-container">
+                    <img
+                      src="/src/assets/img/rrss/github.png"
+                      alt="GitHub"
+                      className="icon-social"
+                    />
+                  </div>
+                </div>
+                
+
+                </div>
                 {/*<h3>Ayudo a las startups a digitalizar y automatizar procesos.  </h3>*/}
               </div>
             </div>
           </section>
           
-
           <section id="about-me">
             <div className="about-me">
               <TextAboutMe/>
@@ -207,7 +232,7 @@ function App() {
       </main>
 
       <footer>
-        <h1>FOOTER</h1>
+        <FooterComponent />
       </footer>
 
     </div>
