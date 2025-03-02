@@ -1,33 +1,31 @@
 .container-Hobbies {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
   
+.hobbies-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+  
+@media (max-width: 768px) {
   .hobbies-layout {
-    display: flex;
-    flex-direction: row; /* En pantallas grandes, estarán en fila */
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding-top: 10px;
+    flex-direction: column;
   }
-  
-  /* Para pantallas pequeñas, apila los elementos */
-  @media (max-width: 768px) {
-    .hobbies-layout {
-      flex-direction: column;
-    }
-  
-    .doughnut-container {
-      order: -1; /* Asegura que el gráfico esté arriba */
-    }
-  
-    .cards-container-hobbies {
-      margin-top: 20px;
-    }
+
+  .doughnut-container {
+    order: -1;
   }
+
+  .cards-container-hobbies {
+    margin-top: 20px;
+  }
+}

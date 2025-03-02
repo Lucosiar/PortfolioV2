@@ -45,6 +45,8 @@ AE9AFF
   text-align: center;
 }
 
+
+
 @media (max-width: 768px) {
   .first-section {
     flex-direction: column; /* Cambia a vertical */
@@ -68,11 +70,16 @@ AE9AFF
 
 .first-section-left {
   flex: 1;
-  max-width: 50%;
   text-align: center;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .first-section-left {
+    display: none; /* Oculta el componente en pantallas pequeñas */
+  }
 }
 
 .first-section-right {
@@ -128,8 +135,8 @@ AE9AFF
 
 .icon-social {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 .icon-social:hover {

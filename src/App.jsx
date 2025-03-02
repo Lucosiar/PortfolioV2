@@ -152,18 +152,22 @@ function App() {
                 <div>
                 <div className="flex space-x-3">
                   <div className="icon-container">
-                    <img
-                      src="/src/assets/img/rrss/linkedin1.png"
-                      alt="LinkedIn"
-                      className="icon-social"
-                    />
+                    <a href="https://www.linkedin.com/in/lucia-cosio-artime-c16012022/" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src="/src/assets/img/rrss/linkedin1.png"
+                        alt="LinkedIn"
+                        className="icon-social"
+                      />
+                    </a>
                   </div>
                   <div className="icon-container">
-                    <img
-                      src="/src/assets/img/rrss/github.png"
-                      alt="GitHub"
-                      className="icon-social"
-                    />
+                    <a href="https://github.com/Lucosiar" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src="/src/assets/img/rrss/github.png"
+                        alt="GitHub"
+                        className="icon-social"
+                      />
+                    </a>
                   </div>
                 </div>
                 
@@ -175,11 +179,11 @@ function App() {
           </section>
           
           <section id="about-me">
-            <div className="about-me">
+            <div className="">
               <TextAboutMe/>
             </div>
 
-            <div className="hobbies">
+            <div className="">
               <HobbiesComponent/>
             </div>
           </section>

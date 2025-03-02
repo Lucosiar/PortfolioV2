@@ -19,13 +19,6 @@ const ExperienceComponent = () => {
             type: "education"
         },
         {
-            title: "Freelance Developer",
-            dateRange: "Septiembre 2023 - Presente",
-            where: "",
-            description: "Automatización de pequeñas tareas con IA, aplicaciones de escritorio y móviles para pymes de diferentes sectores.",
-            type: "work"
-        },
-        {
             title: "Junior Developer Prácticas",
             dateRange: "Octubre 2024 - Febrero 2025",
             where: "Daroma Innovation SL",
@@ -38,6 +31,13 @@ const ExperienceComponent = () => {
             where: "Tokio School",
             description: "",
             type: "education"
+        },
+        {
+          title: "Freelance Developer",
+          dateRange: "Septiembre 2023 - Presente",
+          where: "",
+          description: "Automatización de pequeñas tareas con IA, aplicaciones de escritorio y móviles para pymes de diferentes sectores.",
+          type: "work"
         },
         {
             title: "Junior Developer Prácticas",
