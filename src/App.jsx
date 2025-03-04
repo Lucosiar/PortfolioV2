@@ -100,8 +100,8 @@ function App() {
   return (
     <div className="relative min-h-screen">
       {/*<header class="bg-[#9D85FF] shadow-lg py-7 px-5 sticky top-0 z-50 transition-all duration-300">*/}
-      <header className="bg-black shadow-lg py-7 px-5 sticky top-0 z-50 transition-all duration-300">
-        <div className="container mx-auto flex items-center justify-between px-4 h-10">
+      <header className="bg-black shadow-lg py-7 px-0 sticky top-0 z-50 transition-all duration-300">
+        <div className="flex items-center justify-between px-12 h-6">
           <a href="#home" className="flex items-center text-primary hover:text-secondary">
             <img rel="icon" src="/src/assets/img/serpienteMorada.ico" alt="Icono" className="w-10 h-10"/> 
             <span className="text-3xl font-bold ml-2 ">Lucosiar</span>
