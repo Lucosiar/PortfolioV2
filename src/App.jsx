@@ -23,32 +23,39 @@ function App() {
   const projects=[
     /* `Pequeña descripción de cada proycto y que queden todas mas o menos en la misma linea. No hablar en primera persona. */
     {
-      imageSrc: "/src/assets/img/proyectos/piedra_papel_tijerateta.png",
+      imageSrc: "/src/assets/img/proyectos/piedra_papel_tijeraaas.png",
       imageAlt: "Piedra Papel Tijera",
       title: "Piedra Papel Tijera",
-      description: "El tradicional juego de Piedra, Papel y Tijera, se juega contra un modelo de inteligencia artificial programado para reconocer el gesto que hagas en la cámara y determinar si has ganado o perdido.",
-      language:["Python", "HTML", "CSS", "JavaScript"],
+      description: "El tradicional Piedra, Papel y Tijera, se juega contra un modelo de inteligencia artificial programado para reconocer el gesto que hagas en la cámara y determinar si has ganado o perdido.",
+      language:["Django", "HTML", "CSS", "JavaScript"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/dhhotel.png",
       imageAlt: "Gestor de Hoteles",
       title: "Gestor de Hoteles",
       description: "Propuesta de Nacho sobre una API gestora de hoteles. Mi objetivo fue crear una lading page para visualizar la página del hotel. En caso de tener el back, es posible hacer reservas, iniciar sesión y gestionar las habitaciones.",
-      language:["Python", "React", "TailwindCSS"],
+      language:["Django", "React", "TailwindCSS"],
+    },
+    {
+      imageSrc: "/src/assets/img/proyectos/tictactoe.png",
+      imageAlt: "TicTacToe",
+      title: "Tic Tac Toe",
+      description: "En esta página web encontrarás dos formas diferentes de jugar al 3 en raya. El UltimateTicTacToe se compone de nueve tableros del tres en raya, puedes competir con amigos o jugar contra la IA.",
+      language:["Django", "React"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/efi_cura.png",
       imageAlt: "Efi-Cura",
       title: "Efi-Cura",
       description: "Aplicación para la gestión de medicamentos, citas médicas, incluyendo horarios, dosis, etc. Incluye también un historial de síntomas. La aplicación no está terminada, fue mi proyecto de FP DAM.",
-      language:["Java", "SQLite"], 
+      language:["Java", "SQLite", "Android Studio"], 
     },
     {
-      imageSrc: "/src/assets/img/proyectos/suicidios.png",
-      imageAlt: "Análisis de suicidios",
-      title: "Análisis de suicidios",
-      description: "Es un estudio sobre los suicidios entre 1990 y 2022. Se realizo en función del país, los años, edades, sexo, etc. He limpiado los datos y elaborado una gráficas con el propósito de exponer la cantidad de suicidios en el mundo.",
-      language:["Python", "IA"],
+      imageSrc: "/src/assets/img/proyectos/portfolio.png",
+      imageAlt: "Antiguo Portfolio",
+      title: "Antiguo Portfolio",
+      description: "Lo desarrollé en Django sin casi conocimientos de front. Contiene descripción sobre mí, mis habilidades, proyectos y apartado de contacto. Puede que no sea perfecto pero fue mi primer proyecto con apartado de frontend.",
+      language:["Django", "HTML", "CSS", "JavaScript"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/notely.png",
@@ -62,7 +69,21 @@ function App() {
       imageAlt: "Análisis Animal Crossing",
       title: "Análisis Animal Crossing",
       description: "Analisis sobre los peces en el juego Animal Crossing. Calculé el tiempo o días que un jugador debería jugar para capturar todos los peces. Depende de la habilidad de cada jugador y las cañas que usen.",
-      language:["Python", "IA"],
+      language:["Python", "IA", "Kaggle"],
+    },
+    {
+      imageSrc: "/src/assets/img/proyectos/hamilton_records.png",
+      imageAlt: "Análisis Hamilton",
+      title: "Análisis Hamilton",
+      description: "Analisis sobre Hamilton para homenajear a su nueva trayectoria. Después de 14 años en Mercedes, abre una nueva era con Ferrari. Este proyecto analiza los records de Hamilton a lo largo de su trayectoria por la F1.",
+      language:["Python", "IA", "Kaggle"],
+    },
+    {
+      imageSrc: "/src/assets/img/proyectos/suicidios.png",
+      imageAlt: "Análisis de suicidios",
+      title: "Análisis de suicidios",
+      description: "Es un estudio sobre los suicidios entre 1990 y 2022. Se realizo en función del país, los años, edades, sexo, etc. He limpiado los datos y elaborado una gráficas con el propósito de exponer la cantidad de suicidios en el mundo.",
+      language:["Python", "IA", "Kaggle"],
     },
   ];
 

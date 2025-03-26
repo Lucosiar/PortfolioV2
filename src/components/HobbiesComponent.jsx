@@ -54,8 +54,8 @@ const HobbiesComponent = () => {
     },
     {
       imgSrc: '/src/assets/img/hobbies/modelismo.jpeg',
-      title: 'Modelismo',
-      description: 'Sonará extraño pero también me gusta el modelismo. Suelo centrarme en el montaje de aviones y coches. Es un hobbie que no mucha gente hace pero es entretenido y relajante.',
+      title: 'Maquetas',
+      description: 'Sonará extraño pero también me gusta el montaje de maquetas. Suelo centrarme en el montaje de aviones y coches. Es un hobbie que no mucha gente hace pero es entretenido y relajante.',
     },
     {
       imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',

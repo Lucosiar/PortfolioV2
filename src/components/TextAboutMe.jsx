@@ -5,7 +5,7 @@ const TextAboutMe = () => {
   return (
     <div className="container-AboutMe">
       <div className="image-container">
-        <img src="/src/assets/avatar/DSC_0840copia.JPG" alt="Morado" className="image" />
+        <img src="/src/assets/avatar/yo_foto.JPG" alt="Morado" className="image" />
       </div>
       <div className="text-container pl-5">
         <h2>Sobre mí</h2>

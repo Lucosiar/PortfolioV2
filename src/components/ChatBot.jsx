@@ -5,16 +5,16 @@ function Chatbot() {
     const [isOpen, setIsOpen] = useState(false);
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSendMessage = async () => {
-        
-        const newMessages = [...messages, {sender: "user", text: message}];
+        const newMessages = [...messages, { sender: "user", text: message }];
         setMessages(newMessages);
         setMessage("");
+        setIsLoading(true);
 
         try {
-            // Hacer petición al backend
-            const response = await fetch('http://127.0.0.1:8000/chat/', {
+            const response = await fetch('http://127.0.0.1:5000/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message }),
@@ -22,12 +22,14 @@ function Chatbot() {
 
             if (response.ok) {
                 const data = await response.json();
-                setMessages([...newMessages, { sender: "bot", text: data.reply }]);
+                setMessages([...newMessages, { sender: "bot", text: data.response }]);
             } else {
                 console.error("Error al obtener la respuesta del chatbot");
             }
         } catch (error) {
             console.error("Error en la comunicación con la API:", error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -47,7 +49,6 @@ function Chatbot() {
                             <X size={20} />
                         </button>
                     </div>
-                    {/**Contenedor de mensajes */}
                     <div className="h-64 border rounded p-2 mb-2 overflow-y-auto bg-gray-800 text-white">
                         {messages.map((msg, index) => (
                             <div
@@ -57,6 +58,11 @@ function Chatbot() {
                                 {msg.text}
                             </div>
                         ))}
+                        {isLoading && (
+                            <div className="p-2 my-1 rounded-lg bg-gray-600 text-center text-white">
+                                Cargando respuesta...
+                            </div>
+                        )}
                     </div>
                     <div className="flex">
                         <input
@@ -65,6 +71,7 @@ function Chatbot() {
                             placeholder="Escribe un mensaje..."
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
+                            onKeyDown={(e) => e.key === "Enter" && handleSendMessage()}
                         />
                         <button
                             onClick={handleSendMessage}
