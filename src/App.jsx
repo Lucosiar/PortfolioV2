@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import TextAboutMe from './components/TextAboutMe';
 import HobbiesComponent from './components/HobbiesComponent';
 import CardProyects from './components/CardProyects';
@@ -13,6 +14,7 @@ import ContacComponent from './components/ContacComponent';
 import FooterComponent from './components/FooterComponent';
 
 function App() {
+  const { t } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -24,66 +26,87 @@ function App() {
     /* `Pequeña descripción de cada proycto y que queden todas mas o menos en la misma linea. No hablar en primera persona. */
     {
       imageSrc: "/src/assets/img/proyectos/piedra_papel_tijeraaas.png",
-      imageAlt: "Piedra Papel Tijera",
-      title: "Piedra Papel Tijera",
-      description: "El tradicional Piedra, Papel y Tijera, se juega contra un modelo de inteligencia artificial programado para reconocer el gesto que hagas en la cámara y determinar si has ganado o perdido.",
+      imageAlt: "proyecto1",
+      title: "proyecto1",
+      description: "descripcion1",
       language:["Django", "HTML", "CSS", "JavaScript"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/dhhotel.png",
-      imageAlt: "Gestor de Hoteles",
-      title: "Gestor de Hoteles",
-      description: "Propuesta de Nacho sobre una API gestora de hoteles. Mi objetivo fue crear una lading page para visualizar la página del hotel. En caso de tener el back, es posible hacer reservas, iniciar sesión y gestionar las habitaciones.",
+      imageAlt: "proyecto2",
+      title: "proyecto2",
+      description: "descripcion2",
       language:["Django", "React", "TailwindCSS"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/tictactoe.png",
-      imageAlt: "TicTacToe",
-      title: "Tic Tac Toe",
-      description: "En esta página web encontrarás dos formas diferentes de jugar al 3 en raya. El UltimateTicTacToe se compone de nueve tableros del tres en raya, puedes competir con amigos o jugar contra la IA.",
+      imageAlt: "proyecto3",
+      title: "proyecto3",
+      description: "descripcion3",
       language:["Django", "React"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/efi_cura.png",
-      imageAlt: "Efi-Cura",
-      title: "Efi-Cura",
-      description: "Aplicación para la gestión de medicamentos, citas médicas, incluyendo horarios, dosis, etc. Incluye también un historial de síntomas. La aplicación no está terminada, fue mi proyecto de FP DAM.",
+      imageAlt: "proyecto4",
+      title: "proyecto4",
+      description: "descripcion4",
       language:["Java", "SQLite", "Android Studio"], 
     },
     {
       imageSrc: "/src/assets/img/proyectos/portfolio.png",
-      imageAlt: "Antiguo Portfolio",
-      title: "Antiguo Portfolio",
-      description: "Lo desarrollé en Django sin casi conocimientos de front. Contiene descripción sobre mí, mis habilidades, proyectos y apartado de contacto. Puede que no sea perfecto pero fue mi primer proyecto con apartado de frontend.",
+      imageAlt: "proyecto5",
+      title: "proyecto5",
+      description: "descripcion5",
       language:["Django", "HTML", "CSS", "JavaScript"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/notely.png",
-      imageAlt: "",
-      title: "Notes",
-      description: "Es la primera fase de un proyecto. La aplicación te ayuda a gestionar tus rutinas y eventos. La segunda fase del proyecto es crear un hardware externo para poder usarlo como asistente virtual.", 
+      imageAlt: "proyecto6",
+      title: "proyecto6",
+      description: "descripcion6", 
       language:["Java", "Firebase", "Android Studio"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/acnh.png",
-      imageAlt: "Análisis Animal Crossing",
-      title: "Análisis Animal Crossing",
-      description: "Analisis sobre los peces en el juego Animal Crossing. Calculé el tiempo o días que un jugador debería jugar para capturar todos los peces. Depende de la habilidad de cada jugador y las cañas que usen.",
+      imageAlt: "proyecto7",
+      title: "proyecto7",
+      description: "descripcion7",
       language:["Python", "IA", "Kaggle"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/hamilton_records.png",
-      imageAlt: "Análisis Hamilton",
-      title: "Análisis Hamilton",
-      description: "Analisis sobre Hamilton para homenajear a su nueva trayectoria. Después de 14 años en Mercedes, abre una nueva era con Ferrari. Este proyecto analiza los records de Hamilton a lo largo de su trayectoria por la F1.",
+      imageAlt: "proyecto8",
+      title: "proyecto8",
+      description: "descripcion8",
       language:["Python", "IA", "Kaggle"],
     },
     {
       imageSrc: "/src/assets/img/proyectos/suicidios.png",
-      imageAlt: "Análisis de suicidios",
-      title: "Análisis de suicidios",
-      description: "Es un estudio sobre los suicidios entre 1990 y 2022. Se realizo en función del país, los años, edades, sexo, etc. He limpiado los datos y elaborado una gráficas con el propósito de exponer la cantidad de suicidios en el mundo.",
+      imageAlt: "proyecto9",
+      title: "proyecto9",
+      description: "descripcion9",
       language:["Python", "IA", "Kaggle"],
+    },
+    {
+      imageSrc: "/src/assets/img/proyectos/clasificador_tumores.png",
+      imageAlt: "proyecto10",
+      title: "proyecto10",
+      description: "descripcion10",
+      language:["Python", "IA", "Kaggle"],
+    },
+    {
+      imageSrc: "/src/assets/img/proyectos/estudiantes.png",
+      imageAlt: "proyecto11",
+      title: "proyecto11",
+      description: "descripcion11",
+      language:["Python", "IA", "Kaggle"],
+    },
+    {
+      imageSrc: "/src/assets/img/proyectos/suicidios.png",
+      imageAlt: "proyecto12",
+      title: "proyecto12",
+      description: "descripcion12",
+      language:["Power Bi", "M"],
     },
   ];
 
@@ -138,12 +161,12 @@ function App() {
 
           <nav className={`${menuOpen ? "block" : "hidden"} md:block absolute top-full left-0 w-full bg-black shadow-lg md:static md:w-auto`}>
             <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
-              <li><a href="#about-me" className="text-white text-xl">Sobre mí</a></li>
-              <li><a href="#experience" className="text-white text-xl">TimeLine</a></li>
-              <li><a href="#projects" className="text-white text-xl">Proyectos</a></li>
-              <li><a href="#tecnologies" className="text-white text-xl">Tecnologías</a></li>
-              <li><a href="#certifies" className="text-white text-xl">Certificados</a></li>
-              <li><a href="#contact" className="text-white text-xl">Contacto</a></li>
+              <li><a href="#about-me" className="text-white text-xl">{t("sobre_mi")}</a></li>
+              <li><a href="#experience" className="text-white text-xl">{t("timeline")}</a></li>
+              <li><a href="#projects" className="text-white text-xl">{t("proyectos")}</a></li>
+              <li><a href="#tecnologies" className="text-white text-xl">{t("tecnologias")}</a></li>
+              <li><a href="#certifies" className="text-white text-xl">{t("certificados")}</a></li>
+              <li><a href="#contact" className="text-white text-xl">{t("contacto")}</a></li>
               <li><ToggleButton/></li>
               <li></li>
             </ul>
@@ -155,9 +178,10 @@ function App() {
         
         <div className="main-container">
 
+        {/** 
           <div className="chatbot">
             <Chatbot />
-          </div>
+          </div>*/}
 
           <section id="home">
             <div className="first-section">
@@ -166,10 +190,10 @@ function App() {
                 <PCComponent/>
               </div>
               <div className="first-section-right text-center">
-                <h1>Hola</h1>
-                <h1>soy Lucía Cosío Artime</h1>
-                <h3>Full Stack</h3> 
-                <h3>Desarrolladora IA</h3>
+                <h1>{t("hola")}</h1>
+                <h1>{t("soy")}</h1>
+                <h3>{t("full_stack")}</h3> 
+                <h3>{t("desarrollador_ia")}</h3>
                 <div>
                 <div className="flex space-x-3">
                   <div className="icon-container">
@@ -191,8 +215,6 @@ function App() {
                     </a>
                   </div>
                 </div>
-                
-
                 </div>
                 {/*<h3>Ayudo a las startups a digitalizar y automatizar procesos.  </h3>*/}
               </div>
@@ -218,7 +240,7 @@ function App() {
           
           <section id="projects">
             <div className="projects">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mt-20">Proyectos</h3>
+              <h3 className="text-3xl text-[#FFD700] pl-8 mt-20">{t("proyectos")}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
                 {projects.map((project, index) => (
                   <CardProyects
@@ -236,20 +258,20 @@ function App() {
 
           <section id="tecnologies">
             <div className="tecnologies">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Tecnologías</h3>
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("tecnologias")}</h3>
               <TecnologiesComponent/>
             </div>
           </section>
 
           <section id="certifies">
             <div className="certifies">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Certificados</h3>
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("certificados")}</h3>
             </div>
           </section>
 
           <section>
             <div className="contact">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">Contacto</h3>
+              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("contacto")}</h3>
               <ContacComponent />
             </div>
           </section>

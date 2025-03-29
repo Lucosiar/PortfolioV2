@@ -1,72 +1,75 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './ExperienceComponent.css';
 
 const ExperienceComponent = () => {
 
-    const experiences = [
-        {
-          title: "Freelance Developer",
-          dateRange: "Febrero 2025 - Abril 2025",
-          where: "Llana Consultores",
-          description: "Desarrollé una api que rellena etiquetas en un PPTX automáticamente con los datos enviados por ChatGPT. Automatización de unificación de varios Excels con un programa en Python. Visualización y análisis de datos con Power Bi en la empresa.",
-          type: "work"
-        },
-        {
-            title: "Curso de PowerBi",
-            dateRange: "Febrero 2025 - Abril 2025",
-            where: "IBM",
-            description: "Aprendí a visualizar datos y crear dashboards completos con Power Bi.",
-            type: "education"
-        },
-        {
-            title: "Scrum Master",
-            dateRange: "Diciembre 2024 - Enero 2025",
-            where: "Tokio School",
-            description: "Aprendí como gestionar y sacarle valor a cada persona en el equipo.",
-            type: "education"
-        },
-        {
-            title: "Junior AI Developer",
-            dateRange: "Octubre 2024 - Febrero 2025",
-            where: "Daroma Innovation SL",
-            description: "Desarrollé un clasificador de correos para la empresa con N8N, además de gestionar el tratamiento desde la página web a la base de datos. Desarrollé una api que refactoriza el texto que el usuario intruce para pasarselo a otra IA y que esté bien estructurado con Google Cloud (Python). Desarrollé una api que rellena las etiquetas de un PPTX automaticamente con los datos de la base de datos.",
-            type: "work"
-        },
-        {
-            title: "Especialización en IA, ML y DL",
-            dateRange: "Junio 2023 - Junio 2025",
-            where: "Tokio School",
-            description: "Aprendí todo lo relacionado con la creación de las inteligenciar artificiales, desde modelos simples hasta modelos complejos junto con las redes neuronales y los algoritmos de aprendizaje automático.",
-            type: "education"
-        },
-        {
-          title: "Freelance Developer",
-          dateRange: "Septiembre 2023 - Presente",
-          where: "",
-            description: "Automatización de pequeñas tareas con un programa en Python. Cree una aplicación de teléfono que ayuda al usuario a contar monedas sin necesidad de usar una calculadora. Cree una aplicación de  escritorio que ayuda a juntar PDF, fotos y otros formatos de archivos en un solo archivo. Todo para diferentes empresas de diferentes sectores.",
-          type: "work"
-        },
-        {
-            title: "Junior FullStack Developer",
-            dateRange: "Marzo 2023 - Junio 2023",
-            where: "Sico SL",
-            description: "Actualizar, corregir y añadir funcionalidades a una página web que tenía la empresa, hecha con Angular y .NET.",
-            type: "work"
-        },
-        {
-            title: "Técnico superior desarrollo aplicaciones multiplataforma",
-            dateRange: "Septiembre 2021 - Junio 2023",
-            where: "TuniverS Formación",
-            description: "",
-            type: "education"
-        },
-      ];
+  const { t } = useTranslation();
+
+  const experiences = [
+    {
+      title: t("exp1_title"),
+      dateRange: t("exp1_date"),
+      where: t("exp1_where"),
+      description: t("exp1_desc"),
+      type: "work"
+    },
+    {
+      title: t("exp2_title"),
+      dateRange: t("exp2_date"),
+      where: t("exp2_where"),
+      description: t("exp2_desc"),
+      type: "education"
+    },
+    {
+      title: t("exp3_title"),
+      dateRange: t("exp3_date"),
+      where: t("exp3_where"),
+      description: t("exp3_desc"),
+      type: "education"
+    },
+    {
+      title: t("exp4_title"),
+      dateRange: t("exp4_date"),
+      where: t("exp4_where"),
+      description: t("exp4_desc"),
+      type: "work"
+    },
+    {
+      title: t("exp5_title"),
+      dateRange: t("exp5_date"),
+      where: t("exp5_where"),
+      description: t("exp5_desc"),
+      type: "education"
+    },
+    {
+      title: t("exp6_title"),
+      dateRange: t("exp6_date"),
+      where: t("exp6_where"),
+      description: t("exp6_desc"),
+      type: "work"
+    },
+    {
+      title: t("exp7_title"),
+      dateRange: t("exp7_date"),
+      where: t("exp7_where"),
+      description: t("exp7_desc"),
+      type: "work"
+    },
+    {
+      title: t("exp8_title"),
+      dateRange: t("exp8_date"),
+      where: t("exp8_where"),
+      description: t("exp8_desc"),
+      type: "education"
+    },
+  ];
 
   return (
     <div className="timeline-container">
       <div className='timeline-header'>
-        <h1>Estudios</h1>
-        <h1>Experiencia</h1>
+        <h1>{t("estudios")}</h1>
+        <h1>{t("experiencia")}</h1>
       </div>
       <div className="timeline-line"></div>
       {experiences.map((experience, index) => (

@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 import './TextAboutMe.css';
 
 const TextAboutMe = () => {
+  const { t } = useTranslation();
   return (
     <div className="container-AboutMe">
       <div className="image-container">
         <img src="/src/assets/avatar/yo_foto.JPG" alt="Morado" className="image" />
       </div>
       <div className="text-container pl-5">
-        <h2>Sobre mí</h2>
-        <p>Siempre me ha apasionado el mundo de la informática. Me encanta ayudar a las personas a facilitar su vida mendiante la tecnología. Suelo desarrollar modelos de IA que se puedan implementar en páginas web o aplicaciones móviles. También me gusta desarrollar mis propias aplicaciones móviles.</p>
+        <h2>{t("sobre_mi")}</h2>
+        <p>{t("quien_soy")}</p>
         <div className="flex space-x-3 mt-4">
                   <div className="icon-container">
                     <a href="https://www.linkedin.com/in/lucia-cosio-artime-c16012022/" target="_blank" rel="noopener noreferrer">

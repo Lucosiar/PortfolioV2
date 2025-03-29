@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card } from 'flowbite-react';
+import { useTranslation } from 'react-i18next';
 
 function CardProyects({ imageSrc, imageAlt, title, description, languages }) {
+  const { t } = useTranslation();
   return (
     <Card className="cardProyects max-w-sm flex flex-col items-center bg-black border-2 border-black">
       <div className="rounded-lg pb-2"> 
@@ -14,10 +16,10 @@ function CardProyects({ imageSrc, imageAlt, title, description, languages }) {
         />
       </div>
       <h5 className="text-2xl font-bold tracking-tight text-white mb-2">
-        {title}
+        {t(title)}
       </h5>
       <p className="font-normal text-white text-justify">
-        {description}
+        {t(description)}
       </p>
       <div className="flex flex-wrap gap-2 mt-2">
         {languages.map((language, index) => (

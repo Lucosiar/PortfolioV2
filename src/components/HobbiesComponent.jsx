@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import { useTranslation } from "react-i18next";
 import CardHobbiesComponent from './CardHobbiesComponent';
 import './HobbieComponent.css';
 import './TextAboutMe.css'
@@ -9,57 +10,57 @@ import './TextAboutMe.css'
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const HobbiesComponent = () => {
-
+  const { t } = useTranslation();
   // RELACION DE LA FOTO 2:3
   const hobbies = [
     {
       imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
-      title: 'Leer y escuchar',
-      description: 'Disfruto leyendo mangas, historias de aventuras y ciencia ficción. Además suelo leer libros sobre programación y desarrollo profesional. También me gusta leer blogs y escuchar postcast sobre nuevas tecnologías.',
+      title: 'hob1_title',
+      description: 'hob1_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/videojuegos.jpeg',
-      title: 'Videojuegos',
-      description: 'Me encanta jugar videojuegos, simuladores de carreras, de historia como Assasin\'s Creed, Far Cry y otros. Además, soy una fanática de los juegos de Nintendo.',
+      title: 'hob2_title',
+      description: 'hob2_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
-      title: 'Fotografía',
-      description: 'Me apasiona el mundo de la fotografía. Me gusta hacer fotos cuando voy de viaje, en eventos, o en situaciones diarias. Suelo juntar varios gustos con la fotografía ya que a veces me dedico a fotografiar coches.',
+      title: 'hob3_title',
+      description: 'hob3_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/softball.jpg',
-      title: 'Softball',
-      description: 'LLevo aproximadamente desde el 2016 jugando este deporte. Solemos entrenar todas las semanas y de vez en cuando viajar por la península jugando contra otros equipos y en otras competiciones. Es un mundo poco conocido pero apasionante.', 
+      title: 'hob4_title',
+      description: 'hob4_description', 
     },
     {
       imgSrc: '/src/assets/img/hobbies/programacion.jpeg',
-      title: 'Proyectos personales',
-      description: 'A parte del trabajo, me gusta dedicar mi tiempo a proyectos personales. No solo de IA, sino que también creo páginas web, aplicaciones móviles, arduinos, etc. Tengo un par de amigos con lo que desarrollamos aplicaciones web y móviles para luego compartirlas.',
+      title: 'hob5_title',
+      description: 'hob5_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/estudiar.jpeg',
-      title: 'Estudios',
-      description: 'No me basta con lo que sé, me gusta seguir aprendiendo y expandir mis horizontes. Soy una persona autodidacta pero también suelo apuntarme a cursos.',
+      title: 'hob6_title',
+      description: 'hob6_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/comer.jpeg',
-      title: 'Familia y amigos',
-      description: 'Suelo pasar tiempo con mi familia y amigos. Ya sea para ir a comer por ahí, jugar algún deporte, ir a la playa, animar al equipo de fútbol de mi ciudad, etc.',
+      title: 'hob7_title',
+      description: 'hob7_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/coche_v2-8.jpg',
-      title: 'Coches',
-      description: 'Soy una apasionada del motor y de la gasolina. Me gusta la fórmula 1, los rallyes, la carreras de resistencia. Además, en el norte de España se lleva mucho los rallyes y las quedadas para mostrar los coches.',
+      title: 'hob8_title',
+      description: 'hob8_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/modelismo.jpeg',
-      title: 'Maquetas',
-      description: 'Sonará extraño pero también me gusta el montaje de maquetas. Suelo centrarme en el montaje de aviones y coches. Es un hobbie que no mucha gente hace pero es entretenido y relajante.',
+      title: 'hob9_title',
+      description: 'hob9_description',
     },
     {
       imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
-      description: 'Si quieres saber más sobre mis hobbies, puedes pasar el ratón por encima o clickar en el donut y obtener más información.',
+      description: 'hob10_description',
     },
   ];
 
@@ -146,8 +147,8 @@ const HobbiesComponent = () => {
             <div className="cards-container-hobbies">
               <CardHobbiesComponent
                 imgSrc={selectedHobby.imgSrc}
-                title={selectedHobby.title}
-                description={selectedHobby.description}
+                title={t(selectedHobby.title)}
+                description={t(selectedHobby.description)}
                 imageOnLeft={true}/>
             </div>
           )}
