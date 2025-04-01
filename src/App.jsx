@@ -23,13 +23,13 @@ function App() {
   };
 
   const projects=[
-    /* `Pequeña descripción de cada proycto y que queden todas mas o menos en la misma linea. No hablar en primera persona. */
     {
       imageSrc: "/src/assets/img/proyectos/piedra_papel_tijeraaas.png",
       imageAlt: "proyecto1",
       title: "proyecto1",
       description: "descripcion1",
       language:["Django", "HTML", "CSS", "JavaScript"],
+      projectUrl: "https://github.com/Lucosiar/Rock_Paper_Scissors",
     },
     {
       imageSrc: "/src/assets/img/proyectos/dhhotel.png",
@@ -37,6 +37,7 @@ function App() {
       title: "proyecto2",
       description: "descripcion2",
       language:["Django", "React", "TailwindCSS"],
+      projectUrl: "https://github.com/Lucosiar/DHHotel",
     },
     {
       imageSrc: "/src/assets/img/proyectos/tictactoe.png",
@@ -44,13 +45,15 @@ function App() {
       title: "proyecto3",
       description: "descripcion3",
       language:["Django", "React"],
+      projectUrl: "https://github.com/Lucosiar/TicTacToeExtrem",
     },
     {
       imageSrc: "/src/assets/img/proyectos/efi_cura.png",
       imageAlt: "proyecto4",
       title: "proyecto4",
       description: "descripcion4",
-      language:["Java", "SQLite", "Android Studio"], 
+      language:["Java", "SQLite", "Android Studio"],
+      projectUrl: "https://github.com/Lucosiar/Efi_Cura",
     },
     {
       imageSrc: "/src/assets/img/proyectos/portfolio.png",
@@ -58,6 +61,7 @@ function App() {
       title: "proyecto5",
       description: "descripcion5",
       language:["Django", "HTML", "CSS", "JavaScript"],
+      projectUrl: "https://github.com/Lucosiar/Django-Porfolio",
     },
     {
       imageSrc: "/src/assets/img/proyectos/notely.png",
@@ -65,6 +69,7 @@ function App() {
       title: "proyecto6",
       description: "descripcion6", 
       language:["Java", "Firebase", "Android Studio"],
+      projectUrl: "https://github.com/Lucosiar/AgendaArduino",
     },
     {
       imageSrc: "/src/assets/img/proyectos/acnh.png",
@@ -72,6 +77,8 @@ function App() {
       title: "proyecto7",
       description: "descripcion7",
       language:["Python", "IA", "Kaggle"],
+      projectUrl: "https://www.kaggle.com/code/lcosioa/animalcrossingnewhorizons-fish",
+      
     },
     {
       imageSrc: "/src/assets/img/proyectos/hamilton_records.png",
@@ -79,6 +86,7 @@ function App() {
       title: "proyecto8",
       description: "descripcion8",
       language:["Python", "IA", "Kaggle"],
+      projectUrl: "https://www.kaggle.com/code/lcosioa/hamiltonrecords",
     },
     {
       imageSrc: "/src/assets/img/proyectos/suicidios.png",
@@ -86,6 +94,7 @@ function App() {
       title: "proyecto9",
       description: "descripcion9",
       language:["Python", "IA", "Kaggle"],
+      projectUrl: "https://www.kaggle.com/code/lcosioa/analysis-suicide-rates",
     },
     {
       imageSrc: "/src/assets/img/proyectos/clasificador_tumores.png",
@@ -93,6 +102,7 @@ function App() {
       title: "proyecto10",
       description: "descripcion10",
       language:["Python", "IA", "Kaggle"],
+      projectUrl: "https://www.kaggle.com/code/lcosioa/brain-tumor-classificator",
     },
     {
       imageSrc: "/src/assets/img/proyectos/estudiantes.png",
@@ -100,6 +110,7 @@ function App() {
       title: "proyecto11",
       description: "descripcion11",
       language:["Python", "IA", "Kaggle"],
+      projectUrl: "https://www.kaggle.com/code/lcosioa/student-performance-notebook",
     },
     {
       imageSrc: "/src/assets/img/proyectos/suicidios.png",
@@ -107,6 +118,7 @@ function App() {
       title: "proyecto12",
       description: "descripcion12",
       language:["Power Bi", "M"],
+      projectUrl: "",
     },
   ];
 
@@ -252,6 +264,7 @@ function App() {
                     title={project.title}
                     description={project.description}
                     languages={project.language}
+                    projectUrl={project.projectUrl}
                   />
                 ))}
               </div>
