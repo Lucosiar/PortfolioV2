@@ -4,7 +4,6 @@
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   margin: 20px;
   text-align: left;
@@ -35,8 +34,8 @@
 
 @media (max-width: 768px) {
   .card-container {
-    flex-direction: column; /* En pantallas pequeñas, imagen arriba y texto abajo */
-    text-align: center; /* Centrar el texto */
+    flex-direction: column;
+    text-align: center;
   }
 
   .card-image {

@@ -6,7 +6,8 @@
   min-height: 90vh;
   min-width: 100%;
   /*background-color: #9D85FF;*/
-  background-color: black;
+  background: linear-gradient(to left, #7fff81a8, #96ffce79, #81c0fb62, #fd779b85, #fcd77a9e);
+
 }
 
 .main-container{
