@@ -127,12 +127,16 @@ i18n.use(initReactI18next).init({
         /* Contacto  */
 
         /* Footer / Header  */
+        "home": "Inicio",
         "sobre_mi": "Sobre mí",
         "timeline": "TimeLine",
         "proyectos": "Proyectos",
         "tecnologias": "Tecnologías",
         "certificados": "Certificados",
         "contacto": "Contacto",
+        "derechos_reservados": "Todos los derechos reservados",
+        "resources": "Recursos",
+        "follow_me": "Sígueme",
       }
     },
     en: {
@@ -256,12 +260,16 @@ i18n.use(initReactI18next).init({
         /* Contacto  */
 
         /* Footer / Header  */
+        "home": "Home",
         "sobre_mi": "About me",
         "timeline": "TimeLine",
         "proyectos": "Projects",
         "tecnologias": "Technologies",
         "certificados": "Certifications",
         "contacto": "Contact",
+        "derechos_reservados": "All rights reserved",
+        "resources": "Resources",
+        "follow_me": "Follow me",
 
       },
     },

@@ -136,8 +136,13 @@ AE9AFF
   display: block;
   width: 35px;
   height: 35px;
+  transition: transform 0.3s ease;
 }
 
 .icon-social:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
+}
+
+.background-morado{
+  background-color: #AE99FC;
 }

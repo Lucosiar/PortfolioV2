@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import TextAboutMe from './components/TextAboutMe';
 import HobbiesComponent from './components/HobbiesComponent';
@@ -12,6 +11,7 @@ import TecnologiesComponent from './components/TecnologiesComponent';
 import Chatbot from './components/ChatBot';
 import ContacComponent from './components/ContacComponent';
 import FooterComponent from './components/FooterComponent';
+import WaveComponent from './components/WaveComponent';
 
 function App() {
   const { t } = useTranslation();
@@ -161,12 +161,14 @@ function App() {
 
           <nav className={`${menuOpen ? "block" : "hidden"} md:block absolute top-full left-0 w-full bg-black shadow-lg md:static md:w-auto`}>
             <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
+              <li><a href="#home" className="text-white text-xl">{t("home")}</a></li>
               <li><a href="#about-me" className="text-white text-xl">{t("sobre_mi")}</a></li>
               <li><a href="#experience" className="text-white text-xl">{t("timeline")}</a></li>
               <li><a href="#projects" className="text-white text-xl">{t("proyectos")}</a></li>
               <li><a href="#tecnologies" className="text-white text-xl">{t("tecnologias")}</a></li>
+              {/**
               <li><a href="#certifies" className="text-white text-xl">{t("certificados")}</a></li>
-              <li><a href="#contact" className="text-white text-xl">{t("contacto")}</a></li>
+              <li><a href="#contact" className="text-white text-xl">{t("contacto")}</a></li> */}
               <li><ToggleButton/></li>
               <li></li>
             </ul>
@@ -263,7 +265,7 @@ function App() {
             </div>
           </section>
 
-          <section id="certifies">
+{/*       <section id="certifies">
             <div className="certifies">
               <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("certificados")}</h3>
             </div>
@@ -274,11 +276,12 @@ function App() {
               <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("contacto")}</h3>
               <ContacComponent />
             </div>
-          </section>
+          </section>*/}
         </div>
       </main>
 
       <footer>
+        <WaveComponent />
         <FooterComponent />
       </footer>
 
