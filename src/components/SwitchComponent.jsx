@@ -25,10 +25,6 @@ const ToggleButton = () => {
       >
         <div className="switch-circle"></div>
       </div>
-      {/* BORRAR LUEGO 
-      <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-        {isChecked ? "EN" : "ES"}
-      </span>*/}
     </label>
   );
 };

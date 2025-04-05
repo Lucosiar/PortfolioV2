@@ -201,7 +201,6 @@ function App() {
           <section id="home">
             <div className="first-section">
               <div className="first-section-left text-center">
-                {/*<img src="/src/assets/img/codee.png" alt="Icono" className="imagen_first_section"/>*/}
                 <PCComponent/>
               </div>
               <div className="first-section-right text-center">

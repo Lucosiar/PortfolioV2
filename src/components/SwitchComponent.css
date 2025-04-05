@@ -1,4 +1,3 @@
-/* SwitchComponent.css */
 .switch-container {
     position: relative;
     width: 44px;
@@ -31,9 +30,9 @@
   }
   
   .switch-container.bg-spain-flag .switch-circle {
-    transform: translateX(20px); /* Asegura que el círculo esté a la izquierda cuando la bandera de España está activa */
+    transform: translateX(20px);
   }
   
   .switch-container.bg-uk-flag .switch-circle {
-    transform: translateX(0px); /* Asegura que el círculo esté a la derecha cuando la bandera del Reino Unido está activa */
+    transform: translateX(0px);
   }

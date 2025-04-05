@@ -6,7 +6,6 @@ import CardHobbiesComponent from './CardHobbiesComponent';
 import './HobbieComponent.css';
 import './TextAboutMe.css'
 
-// Registrar los elementos necesarios
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const HobbiesComponent = () => {
