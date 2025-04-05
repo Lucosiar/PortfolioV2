@@ -250,8 +250,6 @@ const TecnologiesComponent = () => {
         ]
     };
 
-    //categories["ALL"] = Object.values(categories).flat();
-
     const [activeTab, setActiveTab] = useState(Object.keys(categories)[0]);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
