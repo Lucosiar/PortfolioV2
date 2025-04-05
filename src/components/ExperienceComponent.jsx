@@ -78,8 +78,8 @@ const ExperienceComponent = () => {
           <div className="timeline-content">
             <h3 className="text-lg font-bold text-white">{experience.title}</h3>
             <p className='text-white'>{experience.where}</p>
-            <p className="text-sm text-gray-300">{experience.dateRange}</p>
-            <p className="text-gray-400">{experience.description}</p>
+            <p className="text-sm text-gray-200">{experience.dateRange}</p>
+            <p className="text-gray-300">{experience.description}</p>
           </div>
         </div>
          ))}

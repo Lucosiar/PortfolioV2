@@ -14,6 +14,8 @@ import WaveComponent from './components/WaveComponent';
 function App() {
   const { t } = useTranslation();
 
+  const [scrolled, setScrolled] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -121,9 +123,13 @@ function App() {
   ];
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
     const handleClick = (event) => {
       event.preventDefault();
-      const targetId = event.currentTarget.getAttribute('href').substring(1);
+      const targetId = event.currentTarget.getAttribute("href").substring(1);
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
@@ -133,28 +139,34 @@ function App() {
 
         window.scrollTo({
           top: scrollToPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     };
 
+    // Scroll listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Smooth scroll links
     const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener('click', handleClick);
+    links.forEach((link) => {
+      link.addEventListener("click", handleClick);
     });
 
+    // Cleanup
     return () => {
-      links.forEach(link => {
-        link.removeEventListener('click', handleClick);
+      window.removeEventListener("scroll", handleScroll);
+      links.forEach((link) => {
+        link.removeEventListener("click", handleClick);
       });
     };
   }, []);
 
-
   return (
     <div className="relative min-h-screen">
-      {/*<header class="bg-[#9D85FF] shadow-lg py-7 px-5 sticky top-0 z-50 transition-all duration-300">*/}
-      <header className="bg-black shadow-lg py-7 px-0 sticky top-0 z-50 transition-all duration-300">
+      <header className={`sticky top-0 z-50 transition-all duration-300 py-7 px-0 ${
+        scrolled ? "bg-[#9D85FF] shadow-lg" : "bg-transparent "
+      }`}>
         <div className="flex items-center justify-between px-12 h-6">
           <a href="#home" className="flex items-center text-primary hover:text-secondary">
             <img rel="icon" src="/src/assets/img/serpienteMorada.ico" alt="Icono" className="w-10 h-10"/> 
@@ -169,16 +181,13 @@ function App() {
 
           </div>
 
-          <nav className={`${menuOpen ? "block" : "hidden"} md:block absolute top-full left-0 w-full shadow-lg md:static md:w-auto`}>
+          <nav className={`${menuOpen ? "block" : "hidden"} md:block absolute top-full left-0 w-full md:static md:w-auto`}>
             <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
               <li><a href="#home" className="text-white text-xl">{t("home")}</a></li>
               <li><a href="#about-me" className="text-white text-xl">{t("sobre_mi")}</a></li>
               <li><a href="#experience" className="text-white text-xl">{t("timeline")}</a></li>
               <li><a href="#projects" className="text-white text-xl">{t("proyectos")}</a></li>
               <li><a href="#tecnologies" className="text-white text-xl">{t("tecnologias")}</a></li>
-              {/**
-              <li><a href="#certifies" className="text-white text-xl">{t("certificados")}</a></li>
-              <li><a href="#contact" className="text-white text-xl">{t("contacto")}</a></li> */}
               <li><ToggleButton/></li>
               <li></li>
             </ul>

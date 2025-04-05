@@ -20,7 +20,7 @@ function CardProyects({ imageSrc, imageAlt, title, description, languages, proje
         <h5 className="text-2xl font-bold tracking-tight text-white mb-2">
           {t(title)}
         </h5>
-        <p className="font-normal text-gray-300 text-justify">
+        <p className="font-normal text-gray-200 text-justify">
           {t(description)}
         </p>
         <div className="flex flex-wrap gap-2 mt-2">
