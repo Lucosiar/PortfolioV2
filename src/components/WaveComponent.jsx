@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./FooterComponent.css";
 
 function WaveComponent() {
   const [offset, setOffset] = useState(1000);
