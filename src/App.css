@@ -41,7 +41,6 @@ AE9AFF
   padding: 10% 0;
   box-sizing: border-box;
   padding: 0 5%;
-  color: #FFD700;
   flex-direction: row;
   text-align: center;
 }
@@ -97,7 +96,6 @@ AE9AFF
 .first-section-right h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #FFD700;
 }
 /* #4338CA */
 

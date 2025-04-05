@@ -205,10 +205,10 @@ function App() {
                 <PCComponent/>
               </div>
               <div className="first-section-right text-center">
-                <h1>{t("hola")}</h1>
-                <h1>{t("soy")}</h1>
-                <h3>{t("full_stack")}</h3> 
-                <h3>{t("desarrollador_ia")}</h3>
+                <h1 className="text-white">{t("hola")}</h1>
+                <h1 className="text-[#AE99FF] font-bold">{t("soy")}</h1>
+                <h3 className="text-[#FFD700]">{t("full_stack")}</h3> 
+                <h3 className="text-[#FFD700]">{t("desarrollador_ia")}</h3>
                 
                 <div className="flex space-x-3">
                   <div className="icon-container">
