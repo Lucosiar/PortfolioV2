@@ -6,7 +6,7 @@ function CardProyects({ imageSrc, imageAlt, title, description, languages, proje
   const { t } = useTranslation();
   
   return (
-    <Card className="cardProyects max-w-sm flex flex-col items-center bg-black border-2 border-black">
+    <Card className="cardProyects max-w-sm flex flex-col items-center bg-[#1f1f1f85] border-2 border-[#AE99FF]">
       <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="w-full">
         <div className="rounded-lg pb-2"> 
           <img
@@ -20,14 +20,14 @@ function CardProyects({ imageSrc, imageAlt, title, description, languages, proje
         <h5 className="text-2xl font-bold tracking-tight text-white mb-2">
           {t(title)}
         </h5>
-        <p className="font-normal text-white text-justify">
+        <p className="font-normal text-gray-300 text-justify">
           {t(description)}
         </p>
         <div className="flex flex-wrap gap-2 mt-2">
           {languages.map((language, index) => (
             <span
               key={index}
-              className="inline-block px-3 py-1 text-sm font-semibold text-black background-morado rounded-full"
+              className="inline-block px-3 py-1 text-sm font-semibold text-black bg-[#AE99FF] rounded-full"
             >
               {language}
             </span>

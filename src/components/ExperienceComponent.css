@@ -12,6 +12,7 @@
 .timeline-header h1 {
   text-align: center;
   width: 48%;
+  color: #FFD700;
 }
 
 .timeline-line {
@@ -20,7 +21,7 @@
     left: 50%;
     width: 2px;
     height: 100%;
-    background-color: #4338CA;
+    background-color: #AE99FF;
 }
 
 .timeline-item {
@@ -48,8 +49,8 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: blck;
-    border: 2px solid #4338CA;
-    background-color: #4338CA;
+    border: 2px solid #AE99FF;
+    background-color: #1f1f1f85;
   }
 
   .timeline-dot {

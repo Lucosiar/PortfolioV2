@@ -76,10 +76,10 @@ const ExperienceComponent = () => {
         <div key={index} className={`timeline-item ${experience.type}`}>
           <div className="timeline-dot"></div>
           <div className="timeline-content">
-            <h3 className="text-lg font-bold">{experience.title}</h3>
-            <p>{experience.where}</p>
-            <p className="text-sm text-gray-500">{experience.dateRange}</p>
-            <p className="text-gray-700">{experience.description}</p>
+            <h3 className="text-lg font-bold text-white">{experience.title}</h3>
+            <p className='text-white'>{experience.where}</p>
+            <p className="text-sm text-gray-300">{experience.dateRange}</p>
+            <p className="text-gray-400">{experience.description}</p>
           </div>
         </div>
          ))}

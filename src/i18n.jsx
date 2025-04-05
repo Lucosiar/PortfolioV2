@@ -36,7 +36,7 @@ i18n.use(initReactI18next).init({
         "hob6_description": "No me basta con lo que sé, me gusta seguir aprendiendo y expandir mis horizontes. Soy una persona autodidacta pero también suelo apuntarme a cursos.",
 
         "hob7_title": "Familia y amigos",
-        "hob7_description": "Suelo pasar tiempo con mi familia y amigos. Ya sea para ir a comer por ahí, jugar algún deporte, ir a la playa, animar al equipo de fútbol de mi ciudad, etc.",
+        "hob7_description": "Suelo pasar tiempo con mi familia y amigos. Ya sea para ir a comer, jugar algún deporte, ir a la playa, animar al equipo de fútbol de mi ciudad, etc.",
 
         "hob8_title": "Coches",
         "hob8_description": "Soy una apasionada del motor y de la gasolina. Me gusta la fórmula 1, los rallyes, la carreras de resistencia. Además, en el norte de España se lleva mucho los rallyes y las quedadas para mostrar los coches.",

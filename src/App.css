@@ -5,8 +5,9 @@
 .min-h-screen{
   min-height: 90vh;
   min-width: 100%;
-  /*background-color: #9D85FF;*/
-  background: linear-gradient(to left, #7fff81a8, #96ffce79, #81c0fb62, #fd779b85, #fcd77a9e);
+  background-color: #1f1f1f85;
+  /*background: linear-gradient(to left, #7fff81a8, #96ffce79, #81c0fb62, #fd779b85, #fcd77a9e);
+  background: linear-gradient(to left, #000000d8, #00000079, #30303062, #1f1f1f85, #5e5e5e9e);*/
 
 }
 
@@ -40,7 +41,7 @@ AE9AFF
   padding: 10% 0;
   box-sizing: border-box;
   padding: 0 5%;
-
+  color: #FFD700;
   flex-direction: row;
   text-align: center;
 }

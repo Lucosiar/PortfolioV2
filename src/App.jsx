@@ -8,8 +8,6 @@ import ToggleButton from './components/SwitchComponent';
 import PCComponent from './components/PCComponent';
 import ExperienceComponent from './components/ExperienceComponent';
 import TecnologiesComponent from './components/TecnologiesComponent';
-import Chatbot from './components/ChatBot';
-import ContacComponent from './components/ContacComponent';
 import FooterComponent from './components/FooterComponent';
 import WaveComponent from './components/WaveComponent';
 
@@ -261,14 +259,14 @@ function App() {
 
           <section id="experience">
             <div className="experience">
-              <h3 className="text-3xl text-[#FFD700] pl-8 pb-8 mb-2">TimeLine</h3>
+              <h3 className="text-[2.5rem] text-[#FFD700] pl-8 pb-8 mb-2">TimeLine</h3>
               <ExperienceComponent/>
             </div>
           </section>
           
           <section id="projects">
             <div className="projects">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mt-20">{t("proyectos")}</h3>
+              <h3 className="text-[2.5rem] text-[#FFD700] pl-8 mt-20">{t("proyectos")}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
                 {projects.map((project, index) => (
                   <CardProyects
@@ -287,23 +285,10 @@ function App() {
 
           <section id="tecnologies">
             <div className="tecnologies">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("tecnologias")}</h3>
+              <h3 className="text-[2.5rem] text-[#FFD700] pl-8 mb-2">{t("tecnologias")}</h3>
               <TecnologiesComponent/>
             </div>
           </section>
-
-{/*       <section id="certifies">
-            <div className="certifies">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("certificados")}</h3>
-            </div>
-          </section>
-
-          <section>
-            <div className="contact">
-              <h3 className="text-3xl text-[#FFD700] pl-8 mb-2">{t("contacto")}</h3>
-              <ContacComponent />
-            </div>
-          </section>*/}
         </div>
       </main>
 
