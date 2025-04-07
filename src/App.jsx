@@ -209,7 +209,7 @@ function App() {
                 <h3 className="text-[#FFD700]">{t("full_stack")}</h3> 
                 <h3 className="text-[#FFD700]">{t("desarrollador_ia")}</h3>
                 
-                <div className="flex flex-col md:flex-row justify-center items-center md:space-x-3 space-y-3 md:space-y-0 mt-4">
+                <div className="flex flex-row justify-center items-center space-x-3 mt-4">
                   <div className="icon-container">
                     <a 
                       href="https://www.linkedin.com/in/lucia-cosio-artime-c16012022/" 
