@@ -74,7 +74,7 @@ function FooterComponent() {
         </div>
       </div>
       <p className="text-base mt-6 mb-4 text-center w-full relative">
-        &copy; 2025 Lucosiar&reg; {t("derechos_reservados")}
+        &copy; 2025 Lucosiar {t("derechos_reservados")}
       </p>
     </div>
   );
