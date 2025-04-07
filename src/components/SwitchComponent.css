@@ -9,12 +9,12 @@
   
   
   .switch-container.bg-spain-flag {
-    background-image: url('/src/assets/img/idiomas/spain.jpg');
+    background-image: url('/assets/img/idiomas/spain.jpg');
     background-size: cover;
   }
   
   .switch-container.bg-uk-flag {
-    background-image: url('/src/assets/img/idiomas/reino_unido.jpg');
+    background-image: url('/assets/img/idiomas/reino_unido.jpg');
     background-size: cover;
   }
   

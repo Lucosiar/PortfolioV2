@@ -1,0 +1,84 @@
+/* Animación para el mouse*/
+@keyframes moveMouse {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(38px); }
+  100% { transform: translateX(0); }
+}
+  
+#mouse {
+  animation: moveMouse 5s infinite ease-in-out;
+}
+/* Animación para escribir las líneas de código */
+@keyframes writeLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+.line {
+  width: 0;
+  animation: writeLine 0.5s linear forwards;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.line:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.line:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.line:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.line:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.line:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.line:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.line:nth-child(7) {
+  animation-delay: 3s;
+}
+
+/* Animación para la aparición de la terminal */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#terminal {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 3.5s;
+}
+
+/* Animación para el parpadeo del cursor */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#cursor {
+  animation: blink 0.7s infinite;
+}
