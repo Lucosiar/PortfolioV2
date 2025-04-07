@@ -7,16 +7,16 @@ const TextAboutMe = () => {
   return (
     <div className="container-AboutMe">
       <div className="image-container">
-        <img src="/src/assets/avatar/yo_foto.JPG" alt="Morado" className="image" />
+        <img src="/assets/avatar/yo_foto.JPG" alt="Morado" className="image" />
       </div>
       <div className="text-container pl-5">
         <h2>{t("sobre_mi")}</h2>
         <p>{t("quien_soy")}</p>
         <div className="flex space-x-3 mt-4">
           <div className="icon-container">
-            <a href="/src/assets/CV/LuciaCosioCV.pdf" download="CV_Lucia_Cosio">
+            <a href="/assets/CV/LuciaCosioCV.pdf" download="CV_Lucia_Cosio">
               <img
-                src="/src/assets/img/rrss/cv3.png" 
+                src="/assets/img/rrss/cv3.png" 
                 alt="Descargar CV"
                 className="icon-social"
               />
@@ -25,7 +25,7 @@ const TextAboutMe = () => {
           <div className="icon-container">
             <a href="mailto:lucosiar333@gmail.com">
               <img
-                src="/src/assets/img/rrss/correo.png"
+                src="/assets/img/rrss/correo.png"
                 alt="Correo"
                 className="icon-social"
               />

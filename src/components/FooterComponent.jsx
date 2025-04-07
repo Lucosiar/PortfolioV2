@@ -14,7 +14,7 @@ function FooterComponent() {
               <h2 className="text-lg">Full Stack Developer</h2>
               <h2 className="text-lg">AI Developer</h2>
             </div>
-            <img rel="icon" src="/src/assets/img/serpienteMorada.ico" alt="Icono" className="w-12 h-12 mr-8"/>
+            <img rel="icon" src="/assets/img/serpienteMorada.ico" alt="Icono" className="w-12 h-12 mr-8"/>
           </div>
 
           <ul className="flex-1 flex flex-wrap justify-center gap-6 list-none p-0 mb-8 text-b text-center md:w-1/2">

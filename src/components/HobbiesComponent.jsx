@@ -13,52 +13,52 @@ const HobbiesComponent = () => {
   // RELACION DE LA FOTO 2:3
   const hobbies = [
     {
-      imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
+      imgSrc: '/assets/img/hobbies/av_v4-10.jpg',
       title: 'hob1_title',
       description: 'hob1_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/videojuegos.jpeg',
+      imgSrc: '/assets/img/hobbies/videojuegos.jpeg',
       title: 'hob2_title',
       description: 'hob2_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
+      imgSrc: '/assets/img/hobbies/av_v4-10.jpg',
       title: 'hob3_title',
       description: 'hob3_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/softball.jpg',
+      imgSrc: '/assets/img/hobbies/softball.jpg',
       title: 'hob4_title',
       description: 'hob4_description', 
     },
     {
-      imgSrc: '/src/assets/img/hobbies/programacion.jpeg',
+      imgSrc: '/assets/img/hobbies/programacion.jpeg',
       title: 'hob5_title',
       description: 'hob5_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/estudiar.jpeg',
+      imgSrc: '/assets/img/hobbies/estudiar.jpeg',
       title: 'hob6_title',
       description: 'hob6_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/comer.jpeg',
+      imgSrc: '/assets/img/hobbies/comer.jpeg',
       title: 'hob7_title',
       description: 'hob7_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/coche_v2-8.jpg',
+      imgSrc: '/assets/img/hobbies/coche_v2-8.jpg',
       title: 'hob8_title',
       description: 'hob8_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/modelismo.jpeg',
+      imgSrc: '/assets/img/hobbies/modelismo.jpeg',
       title: 'hob9_title',
       description: 'hob9_description',
     },
     {
-      imgSrc: '/src/assets/img/hobbies/av_v4-10.jpg',
+      imgSrc: '/assets/img/hobbies/av_v4-10.jpg',
       description: 'hob10_description',
     },
   ];
@@ -76,7 +76,7 @@ const HobbiesComponent = () => {
     ],
   };
   
-  const [centerImage, setCenterImage] = useState('/src/assets/img/hobbies/proyecto.png');
+  const [centerImage, setCenterImage] = useState('/assets/img/hobbies/proyecto.png');
   const [selectedHobby, setSelectedHobby] = useState(hobbies[9]);
 
   const options = {
@@ -109,25 +109,25 @@ const HobbiesComponent = () => {
   const getImageForHobby = (index) => {
     switch (index) {
       case 0:
-        return '/src/assets/img/hobbies/libro-comico.png';
+        return '/assets/img/hobbies/libro-comico.png';
       case 1:
-        return '/src/assets/img/hobbies/consola-de-juego.png';
+        return '/assets/img/hobbies/consola-de-juego.png';
       case 2:
-        return '/src/assets/img/hobbies/camara-de-fotos.png';
+        return '/assets/img/hobbies/camara-de-fotos.png';
       case 3:
-        return '/src/assets/img/hobbies/beisbol.png';
+        return '/assets/img/hobbies/beisbol.png';
       case 4:
-        return '/src/assets/img/hobbies/proyecto.png';
+        return '/assets/img/hobbies/proyecto.png';
       case 5:
-        return '/src/assets/img/hobbies/aprender-en-linea.png';
+        return '/assets/img/hobbies/aprender-en-linea.png';
       case 6:
-        return '/src/assets/img/hobbies/buenas-vibraciones.png';
+        return '/assets/img/hobbies/buenas-vibraciones.png';
       case 7:
-        return '/src/assets/img/hobbies/carreras.png';
+        return '/assets/img/hobbies/carreras.png';
       case 8:
-        return '/src/assets/img/hobbies/piezas.png';
+        return '/assets/img/hobbies/piezas.png';
       default:
-        return '/path/to/default-image.png';
+        return '/assets/img/hobbies/proyecto.png';
     }
   };
 

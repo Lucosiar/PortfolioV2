@@ -24,7 +24,7 @@ function App() {
 
   const projects=[
     {
-      imageSrc: "/src/assets/img/proyectos/piedra_papel_tijeraaas.png",
+      imageSrc: "/assets/img/proyectos/piedra_papel_tijeraaas.png",
       imageAlt: "proyecto1",
       title: "proyecto1",
       description: "descripcion1",
@@ -32,7 +32,7 @@ function App() {
       projectUrl: "https://github.com/Lucosiar/Rock_Paper_Scissors",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/dhhotel.png",
+      imageSrc: "/assets/img/proyectos/dhhotel.png",
       imageAlt: "proyecto2",
       title: "proyecto2",
       description: "descripcion2",
@@ -40,7 +40,7 @@ function App() {
       projectUrl: "https://github.com/Lucosiar/DHHotel",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/tictactoe.png",
+      imageSrc: "/assets/img/proyectos/tictactoe.png",
       imageAlt: "proyecto3",
       title: "proyecto3",
       description: "descripcion3",
@@ -48,7 +48,7 @@ function App() {
       projectUrl: "https://github.com/Lucosiar/TicTacToeExtrem",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/efi_cura.png",
+      imageSrc: "/assets/img/proyectos/efi_cura.png",
       imageAlt: "proyecto4",
       title: "proyecto4",
       description: "descripcion4",
@@ -56,7 +56,7 @@ function App() {
       projectUrl: "https://github.com/Lucosiar/Efi_Cura",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/portfolio.png",
+      imageSrc: "/assets/img/proyectos/portfolio.png",
       imageAlt: "proyecto5",
       title: "proyecto5",
       description: "descripcion5",
@@ -64,7 +64,7 @@ function App() {
       projectUrl: "https://github.com/Lucosiar/Django-Porfolio",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/notely.png",
+      imageSrc: "/assets/img/proyectos/notely.png",
       imageAlt: "proyecto6",
       title: "proyecto6",
       description: "descripcion6", 
@@ -72,7 +72,7 @@ function App() {
       projectUrl: "https://github.com/Lucosiar/AgendaArduino",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/acnh.png",
+      imageSrc: "/assets/img/proyectos/acnh.png",
       imageAlt: "proyecto7",
       title: "proyecto7",
       description: "descripcion7",
@@ -81,7 +81,7 @@ function App() {
       
     },
     {
-      imageSrc: "/src/assets/img/proyectos/hamilton_records.png",
+      imageSrc: "/assets/img/proyectos/hamilton_records.png",
       imageAlt: "proyecto8",
       title: "proyecto8",
       description: "descripcion8",
@@ -89,7 +89,7 @@ function App() {
       projectUrl: "https://www.kaggle.com/code/lcosioa/hamiltonrecords",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/suicidios.png",
+      imageSrc: "/assets/img/proyectos/suicidios.png",
       imageAlt: "proyecto9",
       title: "proyecto9",
       description: "descripcion9",
@@ -97,7 +97,7 @@ function App() {
       projectUrl: "https://www.kaggle.com/code/lcosioa/analysis-suicide-rates",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/clasificador_tumores.png",
+      imageSrc: "/assets/img/proyectos/clasificador_tumores.png",
       imageAlt: "proyecto10",
       title: "proyecto10",
       description: "descripcion10",
@@ -105,7 +105,7 @@ function App() {
       projectUrl: "https://www.kaggle.com/code/lcosioa/brain-tumor-classificator",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/estudiantes.png",
+      imageSrc: "/assets/img/proyectos/estudiantes.png",
       imageAlt: "proyecto11",
       title: "proyecto11",
       description: "descripcion11",
@@ -113,7 +113,7 @@ function App() {
       projectUrl: "https://www.kaggle.com/code/lcosioa/student-performance-notebook",
     },
     {
-      imageSrc: "/src/assets/img/proyectos/suicidios.png",
+      imageSrc: "/assets/img/proyectos/suicidios.png",
       imageAlt: "proyecto12",
       title: "proyecto12",
       description: "descripcion12",
@@ -169,7 +169,7 @@ function App() {
       }`}>
         <div className="flex items-center justify-between px-12 h-6">
           <a href="#home" className="flex items-center text-primary hover:text-secondary">
-            <img rel="icon" src="/src/assets/img/serpienteMorada.ico" alt="Icono" className="w-10 h-10"/> 
+            <img rel="icon" src="/assets/img/serpienteMorada.ico" alt="Icono" className="w-10 h-10"/> 
             <span className="text-3xl font-bold ml-2 ">Lucosiar</span>
           </a>
           <div className="md:hidden">
