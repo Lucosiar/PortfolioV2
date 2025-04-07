@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback  } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { useTranslation } from "react-i18next";
@@ -77,7 +77,7 @@ const HobbiesComponent = () => {
   };
   
   const [centerImage, setCenterImage] = useState('/assets/img/hobbies/proyecto.png');
-  const [selectedHobby, setSelectedHobby] = useState(hobbies[9]);
+  const [selectedHobby, setSelectedHobby] = useState(hobbies[0]);
 
   const options = {
     responsive: true,
@@ -97,13 +97,18 @@ const HobbiesComponent = () => {
         display: false,
       },
     },
-    onHover: (event, chartElement) => {
+    onHover: useCallback((event, chartElement) => {
       if (chartElement.length > 0) {
         const index = chartElement[0].index;
-        setCenterImage(getImageForHobby(index));
-        setSelectedHobby(hobbies[index]);
+        if (index !== hobbies.indexOf(selectedHobby)) {
+          const newHobby = hobbies[index];
+          if (newHobby !== selectedHobby) {
+            setCenterImage(getImageForHobby(index));
+            setSelectedHobby(newHobby);
+          }
+        }
       }
-    },
+    }, [hobbies]),
   };
 
   const getImageForHobby = (index) => {

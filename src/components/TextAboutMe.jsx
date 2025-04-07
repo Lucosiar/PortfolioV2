@@ -12,7 +12,7 @@ const TextAboutMe = () => {
       <div className="text-container pl-5">
         <h2>{t("sobre_mi")}</h2>
         <p>{t("quien_soy")}</p>
-        <div className="flex space-x-3 mt-4">
+        <div className="flex space-x-3 mt-4 icon-supercontainer">
           <div className="icon-container">
             <a href="/assets/CV/LuciaCosioCV.pdf" download="CV_Lucia_Cosio">
               <img
