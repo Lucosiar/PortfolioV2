@@ -9,12 +9,14 @@
 }
 
 .main-container{
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 @media (min-width: 768px) {
   .main-container {
+    padding-left: 10%;
+    padding-right: 10%;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -77,6 +79,12 @@
   justify-content: center;
   text-align: center;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .first-section-right {
+    padding-left: 0;
+  }
 }
 
 .first-section-right h1 {

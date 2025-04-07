@@ -25,9 +25,9 @@ function FooterComponent() {
             <li><a href="#tecnologies" className="hover:text-primary transition-colors duration-300 text-lg">{t("tecnologias")}</a></li>
           </ul>
 
-          <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12 w-full md:w-1/4 mt-8 md:mt-0 md:justify-end">
+          <div className="flex flex-col items-center justify-center gap-10 md:flex-row md:justify-end w-full md:w-1/4 mt-8 md:mt-0">
             <div className="resources-container">
-              <div className="flex space-x-3">
+              <div className="flex justify-center space-x-3">
                 <div className="icon-container">
                   <a 
                     href="https://www.linkedin.com/in/lucia-cosio-artime-c16012022/" 

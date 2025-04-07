@@ -80,6 +80,7 @@ const ExperienceComponent = () => {
             <p className='text-white'>{experience.where}</p>
             <p className="text-sm text-gray-200">{experience.dateRange}</p>
             <p className="text-gray-300">{experience.description}</p>
+            <p className="mobile-tag">{experience.type === "work" ? t("experiencia") : t("estudios")}</p>
           </div>
         </div>
          ))}

@@ -181,8 +181,8 @@ function App() {
 
           </div>
 
-          <nav className={`${menuOpen ? "block" : "hidden"} md:block absolute top-full left-0 w-full md:static md:w-auto`}>
-            <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
+          <nav className={`${menuOpen ? "block" : "hidden"} bg-[#212121] md:block absolute top-full left-0 w-full md:static md:w-auto`}>
+            <ul className="flex flex-col items-center md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-8 p-4 md:p-0">
               <li><a href="#home" className="text-white text-xl">{t("home")}</a></li>
               <li><a href="#about-me" className="text-white text-xl">{t("sobre_mi")}</a></li>
               <li><a href="#experience" className="text-white text-xl">{t("timeline")}</a></li>
@@ -209,7 +209,7 @@ function App() {
                 <h3 className="text-[#FFD700]">{t("full_stack")}</h3> 
                 <h3 className="text-[#FFD700]">{t("desarrollador_ia")}</h3>
                 
-                <div className="flex space-x-3">
+                <div className="flex flex-col md:flex-row justify-center items-center md:space-x-3 space-y-3 md:space-y-0 mt-4">
                   <div className="icon-container">
                     <a 
                       href="https://www.linkedin.com/in/lucia-cosio-artime-c16012022/" 

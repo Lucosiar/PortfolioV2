@@ -17,6 +17,10 @@
 }
   
 @media (max-width: 768px) {
+  .container-Hobbies{
+    padding-top: 10px;
+  }
+
   .hobbies-layout {
     flex-direction: column;
   }

@@ -181,8 +181,8 @@ i18n.use(initReactI18next).init({
         "hob10_description": "If you want to know more about my hobbies, you can hover over or click on the donut to get more information.",
 
         /* TimeLine  */
-        "studies": "Studies",
-        "experience": "Experience",
+        "estudios": "Studies",
+        "experiencia": "Experience",
 
         "exp1_title": "Freelance Developer",
         "exp1_date": "February 2025 - Present",
