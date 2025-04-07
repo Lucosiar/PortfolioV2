@@ -11,6 +11,7 @@ i18n.use(initReactI18next).init({
         "soy": "Soy Lucía Cosío Artime",
         "full_stack": "Full Stack",
         "desarrollador_ia": "Desarrolladora IA",
+        "vuelva": "¡Vuelva pronto!", 
 
 
         /* Sobre mí  */
@@ -146,6 +147,7 @@ i18n.use(initReactI18next).init({
         "soy": "I'm Lucía Cosío Artime",
         "full_stack": "Full Stack",
         "desarrollador_ia": "IA Developer",
+        "vuelva": "Come back soon!",
 
         /* Sobre mí  */
         "quien_soy": "I am a passionate computer scientist with knowledge in the world of fullstack development and AI. I have made several mobile applications, web pages, apis and AI models. As well as data visualizations with various tools. I am motivated to learn and explore new technologies, always looking for a new challenge.",

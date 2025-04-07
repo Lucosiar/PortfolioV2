@@ -144,6 +144,15 @@ function App() {
       }
     };
 
+    const originalTitle = document.title;
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        document.title = `👀 ${t("vuelva")}`;
+      } else {
+        document.title = originalTitle;
+      }
+    };
+
     // Scroll listener
     window.addEventListener("scroll", handleScroll);
 
@@ -153,12 +162,16 @@ function App() {
       link.addEventListener("click", handleClick);
     });
 
+    // Visibility change listener
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
       links.forEach((link) => {
         link.removeEventListener("click", handleClick);
       });
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
