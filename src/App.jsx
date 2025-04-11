@@ -113,7 +113,7 @@ function App() {
       projectUrl: "https://www.kaggle.com/code/lcosioa/student-performance-notebook",
     },
     {
-      imageSrc: "/assets/img/proyectos/suicidios.png",
+      imageSrc: "/assets/img/proyectos/powerBi.png",
       imageAlt: "proyecto12",
       title: "proyecto12",
       description: "descripcion12",

@@ -117,7 +117,7 @@ i18n.use(initReactI18next).init({
         "descripcion9": "Es un estudio sobre los suicidios entre 1990 y 2022. Se realizó en función del país, los años, edades, sexo, etc. He limpiado los datos y elaborado unas gráficas con el propósito de exponer la cantidad de suicidios en el mundo.",
         "descripcion10": "Se compone de una red convolucional neuronal que se entrena con imágenes de varios tipos de tumores. El objetivo es clasificar el tipo de tumor en función de las características de la imagen.",
         "descripcion11": "Explora el desempeño de los estudiantes en función de diversas características. Usa datos de estudiantes de secundaria y aplicamos un análisis exploratorio (EDA) para identificar patrones y correlaciones.",
-        "descripcion12": "Proyecto de fin de curso Power BI. Limpieza de datos, visualización de datos y análisis exploratorio.",
+        "descripcion12": "Proyecto de fin de curso Power BI. Analizar y explorar dato del departamento de marketing. Limpieza de datos, visualización de datos y organización por fechas, gastos, conversiones, campañas, paises, etc.",
 
         /* Tecnologías  */
         "desde": "Desde",

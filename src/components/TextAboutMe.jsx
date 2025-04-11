@@ -3,7 +3,20 @@ import { useTranslation } from "react-i18next";
 import './TextAboutMe.css';
 
 const TextAboutMe = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const lang = i18n.language;
+
+  const cvPath =
+    lang === "en"
+      ? "/assets/CV/LuciaCosioCVIngles.pdf"
+      : "/assets/CV/LuciaCosioCV.pdf";
+
+  const fileName =
+    lang === "en"
+      ? "LuciaCosio_CV_English"
+      : "LuciaCosio_CV_Español";
+
   return (
     <div className="container-AboutMe">
       <div className="image-container">
@@ -14,9 +27,9 @@ const TextAboutMe = () => {
         <p>{t("quien_soy")}</p>
         <div className="flex space-x-3 mt-4 icon-supercontainer">
           <div className="icon-container">
-            <a href="/assets/CV/LuciaCosioCV.pdf" download="CV_Lucia_Cosio">
+            <a href={cvPath} download={fileName}>
               <img
-                src="/assets/img/rrss/cv3.png" 
+                src="/assets/img/rrss/cv3.png"
                 alt="Descargar CV"
                 className="icon-social"
               />
